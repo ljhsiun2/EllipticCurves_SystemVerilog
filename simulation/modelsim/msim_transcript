@@ -1,0 +1,318 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do final_project_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:43 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv 
+# -- Compiling module reg_256
+# 
+# Top level modules:
+# 	reg_256
+# End time: 10:44:43 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/add.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:44 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/add.sv 
+# -- Compiling module add
+# 
+# Top level modules:
+# 	add
+# End time: 10:44:44 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:44 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv 
+# -- Compiling module multiplier
+# 
+# Top level modules:
+# 	multiplier
+# End time: 10:44:44 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/modular_inverse.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:44 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/modular_inverse.sv 
+# -- Compiling module modular_inverse
+# 
+# Top level modules:
+# 	modular_inverse
+# End time: 10:44:45 on Dec 14,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/square_root.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:45 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/square_root.sv 
+# -- Compiling module square_root
+# 
+# Top level modules:
+# 	square_root
+# End time: 10:44:45 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/point_double.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:45 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/point_double.sv 
+# -- Compiling module point_double
+# 
+# Top level modules:
+# 	point_double
+# End time: 10:44:46 on Dec 14,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/point_add.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:46 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/point_add.sv 
+# -- Compiling module point_add
+# 
+# Top level modules:
+# 	point_add
+# End time: 10:44:46 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/gen_point.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:46 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/gen_point.sv 
+# -- Compiling module gen_point
+# 
+# Top level modules:
+# 	gen_point
+# End time: 10:44:47 on Dec 14,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/elg_decrypt.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:47 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/elg_decrypt.sv 
+# -- Compiling module elg_decrypt
+# 
+# Top level modules:
+# 	elg_decrypt
+# End time: 10:44:47 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/elg_encrypt.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:47 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/elg_encrypt.sv 
+# -- Compiling module elg_encrypt
+# 
+# Top level modules:
+# 	elg_encrypt
+# End time: 10:44:47 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/final_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:48 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project" C:/Users/Lucas/Documents/ece385/final_project/final_top.sv 
+# -- Compiling module final_top
+# 
+# Top level modules:
+# 	final_top
+# End time: 10:44:48 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/testbenches {C:/Users/Lucas/Documents/ece385/final_project/testbenches/top_level_testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:44:48 on Dec 14,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lucas/Documents/ece385/final_project/testbenches" C:/Users/Lucas/Documents/ece385/final_project/testbenches/top_level_testbench.sv 
+# -- Compiling module top_level_testbench
+# 
+# Top level modules:
+# 	top_level_testbench
+# End time: 10:44:48 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_level_testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" top_level_testbench 
+# Start time: 10:44:50 on Dec 14,2017
+# Loading sv_std.std
+# Loading work.top_level_testbench
+# Loading work.final_top
+# Loading work.gen_point
+# Loading work.reg_256
+# Loading work.point_add
+# Loading work.add
+# Loading work.modular_inverse
+# Loading work.multiplier
+# Loading work.point_double
+# Loading work.elg_encrypt
+# Loading work.square_root
+# Loading work.elg_decrypt
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/bob_point/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/sqrt/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/sqrt/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/sqrt/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/sqrt/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_C/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_tempD/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/encrypt_message/gen_D/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/add0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_C/doub0/mult3/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult0/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult1/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Data'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# ** Warning: (vsim-3015) C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv(15): [PCDPC] - Port size (8) does not match connection size (256) for port 'Out'. The port definition is at: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_testbench/final0/decrypt_message/gen_D/mult2/count File: C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 12:33:31 on Dec 14,2017, Elapsed time: 1:48:41
+# Errors: 0, Warnings: 78

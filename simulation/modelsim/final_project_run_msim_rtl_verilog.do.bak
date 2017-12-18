@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/reg_256.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/point_op.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/modulus.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/modular_inverse.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/point_gen.sv}
+

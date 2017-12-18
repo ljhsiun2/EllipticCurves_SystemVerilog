@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/reg_256.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/point_op.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/modulus.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/modular_inverse.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/point_gen.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/temp_demo {C:/Users/Lucas/Documents/ece385/final_project/temp_demo/final_top.sv}
+
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/testbenches {C:/Users/Lucas/Documents/ece385/final_project/testbenches/top_level_testbench.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_level_testbench
+
+add wave *
+view structure
+view signals
+run -all

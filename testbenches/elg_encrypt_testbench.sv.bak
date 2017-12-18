@@ -1,0 +1,31 @@
+module elg_encrypt();
+
+timeunit 10ns;
+
+timeprecision 1ns;
+
+logic Clk, Reset;
+logic [255:0] Gx, Gy, Qx, Qy, message, Cx, Cy, Dx, Dy;
+logic Done;
+
+elg_encrypt elg(.*);
+
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+end
+
+initial begin: TEST_VECTORS
+
+Reset = 1'b1;
+#2 Reset = 1'b0;
+Gx = 5;
+Gy = 1;
+Qx = 10;
+Qy = 6;
+message = 8;
+end
+endmodule
