@@ -6,16 +6,7 @@ ECE385 is the FPGA class at UIUC, and this is my final project for that class. T
 the project, on a scale of 1-10. That is, a project of "Pong" would get a difficulty score of 1, whereas a project implementing the Apple Classic II
 would be a score of 10. This score is up to the discretion of the TA grading the project.
 
-My initial project proposal was to do RSA. Now this is a very overdone and outright cliche project with hundreds of implementations of it
-on github alone. Hell, there's even an exact [replica](https://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2011/clt67_yl478/clt67_yl478/index.html)
-down to the very model (DE2-115) that we use at UIUC that, if I were unethical, I could copy and sub in SystemVerilog.
-
-That didn't bother me too much because 1) I have morals and 2) like I said, RSA is a very normal (bland) project for an up-and-coming
-security engineer, akin to a baking soda volcano at a middle school science fair. It's a very doable and very reasonable task for an undergrad
-in his junior year.
-
-The straw that broke the camel's back and made me do this project was when I pitched the project to my TA, he guesstimated the difficulty to
-be at a 5, and I wanted that 10, and so after 4-5 sleepless weeks here I am.
+My initial project proposal was to do an RSA implementation. I decided against it because 1) everybody under the sun does it (down to the same exact [board we have at UIUC](https://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2011/clt67_yl478/clt67_yl478/index.html)) and 2) more importantly, my TA guesstimated the difficulty score to be a 5, but I couldn't settle for that, so 4-5 sleepless weeks later here's that 10/10 project.
 
 **NOTE:** You definitely shouldn't use this jank code written by an undergrad in your commercial applications.
 
@@ -36,3 +27,5 @@ of entropy (e.g. a mouse or temperature)
 or security.
 
 --Encrypt and decrypt takes ~60ms and ~50ms respectively. 
+
+--Final_top_2 and testbench_2 are the ModelSim files, final_top is the interface to the actual board. 
