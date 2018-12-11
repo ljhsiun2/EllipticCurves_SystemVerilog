@@ -1,7 +1,7 @@
-module regfile (input logic Clk, Reset, Load,
+module regfile (input logic Clk, Load,
 				input logic [4:0] ADDR,	//Address of registers
 				input logic [31:0] write_data,
-				input  logic [3:0] AVL_BYTE_EN,	
+				input  logic [3:0] AVL_BYTE_EN,
 				output logic [31:0] D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D30, D31, Data_Out);
 
 	logic [31:0] newData, Data;
@@ -11,7 +11,7 @@ module regfile (input logic Clk, Reset, Load,
 //REGISTERS 8-15: KEY_OUT
 //REGISTER 30: START
 //REGISTER 31: DONE
-	
+
 
 //Determine which bytes to assign to registers
 always_comb
@@ -28,24 +28,24 @@ begin
 end
 
 	//Instantiate the 26 registers 0-23, 30, 31
-	reg_256 #(32) reg0(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00000) & Load), .Data(Data), .Out(D0));
-	reg_256 #(32) reg1(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00001) & Load), .Data(Data), .Out(D1));
-	reg_256 #(32) reg2(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00010) & Load), .Data(Data), .Out(D2));
-	reg_256 #(32) reg3(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00011) & Load), .Data(Data), .Out(D3));
-	reg_256 #(32) reg4(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00100) & Load), .Data(Data), .Out(D4));
-	reg_256 #(32) reg5(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00101) & Load), .Data(Data), .Out(D5));
-	reg_256 #(32) reg6(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00110) & Load), .Data(Data), .Out(D6));
-	reg_256 #(32) reg7(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b00111) & Load), .Data(Data), .Out(D7));
-	reg_256 #(32) reg8(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01000) & Load), .Data(Data), .Out(D8));
-	reg_256 #(32) reg9(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01001) & Load), .Data(Data), .Out(D9));
-	reg_256 #(32) reg10(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01010) & Load), .Data(Data), .Out(D10));
-	reg_256 #(32) reg11(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01011) & Load), .Data(Data), .Out(D11));
-	reg_256 #(32) reg12(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01100) & Load), .Data(Data), .Out(D12));
-	reg_256 #(32) reg13(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01101) & Load), .Data(Data), .Out(D13));
-	reg_256 #(32) reg14(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01110) & Load), .Data(Data), .Out(D14));
-	reg_256 #(32) reg15(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b01111) & Load), .Data(Data), .Out(D15));
-	reg_256 #(32) reg30(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b11110) & Load), .Data(Data), .Out(D30));
-	reg_256 #(32) reg31(.Clk(Clk), .Reset(Reset), .Load((ADDR == 5'b11111) & Load), .Data(Data), .Out(D31));
+	reg_256 #(32) reg0(.Clk(Clk), .Load((ADDR == 5'b00000) & Load), .Data(Data), .Out(D0));
+	reg_256 #(32) reg1(.Clk(Clk), .Load((ADDR == 5'b00001) & Load), .Data(Data), .Out(D1));
+	reg_256 #(32) reg2(.Clk(Clk), .Load((ADDR == 5'b00010) & Load), .Data(Data), .Out(D2));
+	reg_256 #(32) reg3(.Clk(Clk), .Load((ADDR == 5'b00011) & Load), .Data(Data), .Out(D3));
+	reg_256 #(32) reg4(.Clk(Clk), .Load((ADDR == 5'b00100) & Load), .Data(Data), .Out(D4));
+	reg_256 #(32) reg5(.Clk(Clk), .Load((ADDR == 5'b00101) & Load), .Data(Data), .Out(D5));
+	reg_256 #(32) reg6(.Clk(Clk), .Load((ADDR == 5'b00110) & Load), .Data(Data), .Out(D6));
+	reg_256 #(32) reg7(.Clk(Clk), .Load((ADDR == 5'b00111) & Load), .Data(Data), .Out(D7));
+	reg_256 #(32) reg8(.Clk(Clk), .Load((ADDR == 5'b01000) & Load), .Data(Data), .Out(D8));
+	reg_256 #(32) reg9(.Clk(Clk), .Load((ADDR == 5'b01001) & Load), .Data(Data), .Out(D9));
+	reg_256 #(32) reg10(.Clk(Clk), .Load((ADDR == 5'b01010) & Load), .Data(Data), .Out(D10));
+	reg_256 #(32) reg11(.Clk(Clk), .Load((ADDR == 5'b01011) & Load), .Data(Data), .Out(D11));
+	reg_256 #(32) reg12(.Clk(Clk), .Load((ADDR == 5'b01100) & Load), .Data(Data), .Out(D12));
+	reg_256 #(32) reg13(.Clk(Clk), .Load((ADDR == 5'b01101) & Load), .Data(Data), .Out(D13));
+	reg_256 #(32) reg14(.Clk(Clk), .Load((ADDR == 5'b01110) & Load), .Data(Data), .Out(D14));
+	reg_256 #(32) reg15(.Clk(Clk), .Load((ADDR == 5'b01111) & Load), .Data(Data), .Out(D15));
+	reg_256 #(32) reg30(.Clk(Clk), .Load((ADDR == 5'b11110) & Load), .Data(Data), .Out(D30));
+	reg_256 #(32) reg31(.Clk(Clk), .Load((ADDR == 5'b11111) & Load), .Data(Data), .Out(D31));
 
 
 //Read logic
@@ -73,14 +73,6 @@ end
 				default: Data_Out = 32'b0;
 			endcase
 	end
-		
+
 
 endmodule
-
-	
-
-	
-
-
-
-

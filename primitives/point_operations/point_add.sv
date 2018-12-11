@@ -1,6 +1,5 @@
 module point_add
-	#(parameter P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F)
-	(input logic Clk, Reset,
+	(input logic clk, Reset,
 	input logic [255:0]  Py, Qy, Px, Qx,
 	output logic Done,
 	output logic [255:0] Rx, Ry);
@@ -21,7 +20,7 @@ module point_add
 	// Rx = s*s - Px - Qx
 	// Ry = s(Px - Rx) - Py
 
-	always_ff @ (posedge Clk)
+	always_ff @ (posedge clk)
 	begin
 		if(Reset) begin
 			counter <= 0;
@@ -36,17 +35,17 @@ module point_add
 		end
 	end
 
-	add #(P) add0(.a(Py), .b(Qy), .op(1'b1), .sum(sum0));	// Py - Qy
-	add #(P) add1(.a(Px), .b(Qx), .op(1'b1), .sum(sum1));	// Px - Qx
-	modular_inverse #(P) inv0(.Clk, .Reset, .in({256'b0, sum1}), .out(inv1), .Done(inv_done)); //1/Px-Qx
-	multiplier #(P) mult0(.Clk, .Reset(~inv_done | Reset), .a(sum0), .b(inv1), .Done(mult0_done), .product(s)); //slope
+	add add0(.a(Py), .b(Qy), .op(1'b1), .sum(sum0));	// Py - Qy
+	add add1(.a(Px), .b(Qx), .op(1'b1), .sum(sum1));	// Px - Qx
+	modular_inverse inv0(.clk, .Reset, .in({256'b0, sum1}), .out(inv1), .Done(inv_done)); //1/Px-Qx
+	multiplier mult0(.clk, .Reset(~inv_done | Reset), .a(sum0), .b(inv1), .Done(mult0_done), .product(s)); //slope
 
-	multiplier #(P) mult1(.Clk, .Reset(~mult0_done | Reset), .a(s), .b(s), .Done(mult1_done), .product(prod2)); // s^2
-	add #(P) add2(.a(Px), .b(Qx), .op(1'b0), .sum(sum3));	// Px + Qx
-	add #(P) add3(.a(prod2), .b(sum3), .op(1'b1), .sum(sum4)); // s^2 - (Px + Qx)
-	add #(P) add4(.a(Px), .b(sum4), .op(1'b1), .sum(sum5));	// Px - Rx
-	add #(P) add5(.a(prod3), .b(Py), .op(1'b1), .sum(sum6)); // s(Px-Rx) - Py
-	multiplier #(P) mult2(.Clk, .Reset(~reset2 | Reset), .a(s), .b(sum5), .Done(mult2_done), .product(prod3)); //s(Px - Rx)
+	multiplier mult1(.clk, .Reset(~mult0_done | Reset), .a(s), .b(s), .Done(mult1_done), .product(prod2)); // s^2
+	add add2(.a(Px), .b(Qx), .op(1'b0), .sum(sum3));	// Px + Qx
+	add add3(.a(prod2), .b(sum3), .op(1'b1), .sum(sum4)); // s^2 - (Px + Qx)
+	add add4(.a(Px), .b(sum4), .op(1'b1), .sum(sum5));	// Px - Rx
+	add add5(.a(prod3), .b(Py), .op(1'b1), .sum(sum6)); // s(Px-Rx) - Py
+	multiplier mult2(.clk, .Reset(~reset2 | Reset), .a(s), .b(sum5), .Done(mult2_done), .product(prod3)); //s(Px - Rx)
 	/* to use a nonzero a, uncomment below line and replace all "sum4" with "sum8" */
 	//add #(17) add7(.a(sum4), .b({254'b0, 2'b10}), .op(1'b0), .sum(sum8)); // Rx + a (for x^3 + 2x + 2, a is 2)
 

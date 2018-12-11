@@ -1,5 +1,5 @@
-module chacha 
-			(input logic Clk, Reset,
+module chacha
+			(input logic clk, Reset,
 			input logic [255:0] key,
 			input logic [127:0] nonce,
 			output logic [511:0] stream,
@@ -37,8 +37,8 @@ assign original_state = {128'h617078653320646e79622d326b206574, key, nonce};
 
 
 
-reg_256 #(512) stateReg(.Clk, .Reset, .Load(state_load), .Data(state_in), .Out(state_out));
-reg_256 #(4) roundReg(.Clk, .Reset, .Load(count_load), .Data(count_in), .Out(count_out));
+reg_256 #(512) stateReg(.clk, .Load(state_load), .Data(state_in), .Out(state_out));
+reg_256 #(4) roundReg(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
 
 quarter_round qr1(.a(a1), .b(b1), .c(c1), .d(d1), .w(w1), .x(x1), .y(y1), .z(z1));
 quarter_round qr2(.a(a2), .b(b2), .c(c2), .d(d2), .w(w2), .x(x2), .y(y2), .z(z2));
@@ -48,7 +48,7 @@ quarter_round qr4(.a(a4), .b(b4), .c(c4), .d(d4), .w(w4), .x(x4), .y(y4), .z(z4)
 enum logic [2:0] {Init, Col, Diag, Add, Finish} State, Next_State;
 
 
-    always_ff @ (posedge Clk)
+    always_ff @ (posedge clk)
     begin
         if(Reset)
 		begin
@@ -66,7 +66,7 @@ always_comb begin
 		Col: Next_State = Diag;
 		Diag:
 		begin
-			if(count_out == 5'b1010)	
+			if(count_out == 5'b1010)
 				Next_State = Add;
 			else
 				Next_State = Col;
@@ -81,7 +81,7 @@ always_comb begin
 	count_in = count_out;
 	Done = 1'b0;
 	stream = 512'b0;
-	
+
 	state_load = 1'b0;
 	count_load = 1'b0;
 	a1 = 32'b0;
@@ -150,7 +150,7 @@ always_comb begin
 
 			c1 = state_out[255:224];	//8
 			c2 = state_out[223:192];	//9
-			c3 = state_out[191:160];	//10	
+			c3 = state_out[191:160];	//10
 			c4 = state_out[159:128];	//11
 
 			d1 = state_out[127:96];		//12
@@ -162,7 +162,7 @@ always_comb begin
 			state_in[479:448] = w2;
 			state_in[447:416] = w3;
 			state_in[415:384] = w4;
-		
+
 			state_in[383:352] = x1;
 			state_in[351:320] = x2;
 			state_in[319:288] = x3;
@@ -172,11 +172,11 @@ always_comb begin
 			state_in[223:192] = y2;
 			state_in[191:160] = y3;
 			state_in[159:128] = y4;
-	
+
 			state_in[127:96] = z1;
 			state_in[95:64] = z2;
 			state_in[63:32] = z3;
-			state_in[31:0] = z4;		
+			state_in[31:0] = z4;
 		end
 		Diag:
 		begin
@@ -184,7 +184,7 @@ always_comb begin
 
 			a1 = state_out[511:480];	//0
 			a2 = state_out[479:448];	//1
-			a3 = state_out[447:416];	//2	
+			a3 = state_out[447:416];	//2
 			a4 = state_out[415:384];	//3
 
 			b1 = state_out[351:320];	//5
@@ -206,17 +206,17 @@ always_comb begin
 			state_in[479:448] = w2;		//1
 			state_in[447:416] = w3;		//2
 			state_in[415:384] = w4;		//3
-		
+
 			state_in[351:320] = x1;		//5
 			state_in[319:288] = x2;		//6
 			state_in[287:256] = x3;		//7
 			state_in[383:352] = x4;		//4
 
 			state_in[191:160] = y1;		//10
-			state_in[159:128] = y2;		
+			state_in[159:128] = y2;
 			state_in[255:224] = y3;
 			state_in[223:192] = y4;
-	
+
 			state_in[31:0] = z1;
 			state_in[127:96] = z2;
 			state_in[95:64] = z3;
@@ -230,7 +230,7 @@ always_comb begin
 			s2 = state_out[479:448] + original_state[479:448];
 			s3 = state_out[447:416] + original_state[447:416];
 			s4 = state_out[415:384] + original_state[415:384];
-		
+
 			s5 = state_out[383:352] + original_state[383:352];
 			s6 = state_out[351:320] + original_state[351:320];
 			s7 = state_out[319:288] + original_state[319:288];
@@ -240,7 +240,7 @@ always_comb begin
 			s10 = state_out[223:192] + original_state[223:192];
 			s11 = state_out[191:160] + original_state[191:160];
 			s12 = state_out[159:128] + original_state[159:128];
-	
+
 			s13 = state_out[127:96] + original_state[127:96];
 			s14 = state_out[95:64] + original_state[95:64];
 			s15 = state_out[63:32] + original_state[63:32];
@@ -250,7 +250,7 @@ always_comb begin
 			state_in[479:448] = s2[31:0];
 			state_in[447:416] = s3[31:0];
 			state_in[415:384] = s4[31:0];
-	
+
 			state_in[383:352] = s5[31:0];
 			state_in[351:320] = s6[31:0];
 			state_in[319:288] = s7[31:0];
@@ -260,7 +260,7 @@ always_comb begin
 			state_in[223:192] = s10[31:0];
 			state_in[191:160] = s11[31:0];
 			state_in[159:128] = s12[31:0];
-	
+
 			state_in[127:96] = s13[31:0];
 			state_in[95:64] = s14[31:0];
 			state_in[63:32] = s15[31:0];

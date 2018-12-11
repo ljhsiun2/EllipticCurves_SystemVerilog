@@ -1,2 +1,1 @@
-Info (10281): Verilog HDL Declaration information at gen_point.sv(4): object "Gx" differs only in case from object "gx" in the same scope File: C:/Users/Lucas/Documents/ece385/final_project/gen_point.sv Line: 4
-Info (10281): Verilog HDL Declaration information at gen_point.sv(4): object "Gy" differs only in case from object "gy" in the same scope File: C:/Users/Lucas/Documents/ece385/final_project/gen_point.sv Line: 4
+Info (10281): Verilog HDL Declaration information at sha_mainloop.sv(13): object "K" differs only in case from object "k" in the same scope File: C:/Users/Lucas/Documents/ece385/ecc/primitives/hash/sha_mainloop.sv Line: 13

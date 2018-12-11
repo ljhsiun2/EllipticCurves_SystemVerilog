@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY final_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:13:57  NOVEMBER 12, 2017"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -54,7 +54,7 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH top_level_testbench -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME point_mult_testbench -section_id eda_simulation
@@ -79,6 +79,19 @@ set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name EDA_TEST_BENCH_NAME elg_decrypt_testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id elg_decrypt_testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME elg_decrypt_testbench -section_id elg_decrypt_testbench
+set_global_assignment -name EDA_TEST_BENCH_NAME top_level_testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_level_testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_level_testbench -section_id top_level_testbench
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name QII_AUTO_PACKED_REGISTERS NORMAL
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/point_mult_testbench.sv -section_id point_mult_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/gen_point_testbench.sv -section_id gen_point_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/square_root_testbench.sv -section_id square_root_testbench
@@ -86,25 +99,28 @@ set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/point_add_testbench.
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/elg_encrypt_testbench.sv -section_id elg_encrypt_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/multiplier_testbench.sv -section_id multiplier_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/elg_decrypt_testbench.sv -section_id elg_decrypt_testbench
-set_global_assignment -name EDA_TEST_BENCH_NAME top_level_testbench -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_level_testbench
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_level_testbench -section_id top_level_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/top_level_testbench.sv -section_id top_level_testbench
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_verify.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign_control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_padder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_mainloop.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_256.sv
+set_global_assignment -name SYSTEMVERILOG_FILE components/elliptic_curve_structs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign_datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign.sv
 set_global_assignment -name SYSTEMVERILOG_FILE final_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbenches/top_level_testbench.sv
-set_global_assignment -name SYSTEMVERILOG_FILE elg_decrypt.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/elg_decrypt_testbench.sv
-set_global_assignment -name SYSTEMVERILOG_FILE square_root.sv
-set_global_assignment -name SYSTEMVERILOG_FILE reg_256.sv
-set_global_assignment -name SYSTEMVERILOG_FILE point_double.sv
-set_global_assignment -name SYSTEMVERILOG_FILE point_add.sv
-set_global_assignment -name SYSTEMVERILOG_FILE multiplier.sv
-set_global_assignment -name SYSTEMVERILOG_FILE modular_inverse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE gen_point.sv
-set_global_assignment -name SYSTEMVERILOG_FILE elg_encrypt.sv
-set_global_assignment -name SYSTEMVERILOG_FILE add.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/elg_encrypt_testbench.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE rng/quarter_round.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rng/chacha.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/modular_operations/square_root.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/modular_operations/multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/modular_operations/modular_inverse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/modular_operations/add.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/point_operations/point_double.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/point_operations/point_add.sv
+set_global_assignment -name SYSTEMVERILOG_FILE primitives/point_operations/gen_point.sv
+set_global_assignment -name SYSTEMVERILOG_FILE components/regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE components/reg_256.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
-module control 
-		(input logic Clk, reset, 
+module control
+		(input logic Clk, reset,
 		input logic[3:0] Start,
 		input logic[255:0] in,
 		output logic[255:0] export_key,
@@ -60,15 +60,15 @@ elg_decrypt #(256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFF
 //Generate two 256 bit private keys from a 512 bit random number stream
 chacha chacha20(.Clk, .Reset, .key(256'b0), .nonce(128'b0), .stream(stream_out), .Done(done_chacha));
 
-    always_ff @ (posedge Clk)
-    begin
-        if(reset)
-		begin
-            State <= Init;
-		end
-        else
-            State <= Next_State;
-    end
+always_ff @ (posedge Clk)
+begin
+    if(reset)
+	begin
+        State <= Init;
+	end
+    else
+        State <= Next_State;
+end
 
 //Next state logic
 
@@ -86,14 +86,14 @@ always_comb begin
 	Get_Msg:
 	begin
 		if(Start == 4'b0010)
-			Next_State = Get_Seed; 
+			Next_State = Get_Seed;
 		else
 			Next_State = Get_Msg;
 	end
 	Get_Seed:
 	begin
 		if(Start == 4'b0011)
-			Next_State = Out_PrivA; 
+			Next_State = Out_PrivA;
 		else
 			Next_State = Get_Seed;
 	end
@@ -279,6 +279,3 @@ always_comb begin
 end
 
 endmodule
-	
-
-

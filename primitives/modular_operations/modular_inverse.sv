@@ -1,6 +1,6 @@
 module modular_inverse
 	#(parameter P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F)
-	(input logic Clk, Reset,
+	(input logic clk, Reset,
 	input logic [511:0] in,
 	output logic [255:0] out,
 	output logic Done);
@@ -23,13 +23,13 @@ module modular_inverse
 
 
 	//Register Instatntations
-	reg_256 #(512) u(.Clk, .Reset, .Load(u_load), .Data(u_in), .Out(u_out));
-	reg_256 #(512) v(.Clk, .Reset, .Load(v_load), .Data(v_in), .Out(v_out));
-	reg_256 #(512) g1(.Clk, .Reset, .Load(g1_load), .Data(g1_in), .Out(g1_out));
-	reg_256 #(512) g2(.Clk, .Reset, .Load(g2_load), .Data(g2_in), .Out(g2_out));
+	reg_256 #(512) u(.clk, .Load(u_load), .Data(u_in), .Out(u_out));
+	reg_256 #(512) v(.clk, .Load(v_load), .Data(v_in), .Out(v_out));
+	reg_256 #(512) g1(.clk, .Load(g1_load), .Data(g1_in), .Out(g1_out));
+	reg_256 #(512) g2(.clk, .Load(g2_load), .Data(g2_in), .Out(g2_out));
 
 	//State machine behavior
-	always_ff @ (posedge Clk)
+	always_ff @ (posedge clk)
 	begin
 		if(Reset)
 		    State <= Init;

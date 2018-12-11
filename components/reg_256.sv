@@ -1,16 +1,18 @@
-module reg_256 #(parameter size = 256)
-				(input  logic Clk, Reset, Load,
-              input  logic [size-1:0]  Data,
-              output logic [size-1:0]  Out);
+import elliptic_curve_structs::*;
 
-    always_ff @ (posedge Clk)
-    begin
-	 	 if (Reset)
-			  Out <= 0;
-		 else if (Load)
-			  Out <= Data;
-		else
-			  Out <= Out;
-	end
+module reg_256 #(parameter size = 256)
+(
+	input  logic clk, Load,
+  	input  logic [size-1:0]  Data,
+  	output logic [size-1:0]  Out
+);
+
+always_ff @ (posedge clk)
+begin
+	if (Load)
+		  Out <= Data;
+	else
+		  Out <= Out;
+end
 
 endmodule

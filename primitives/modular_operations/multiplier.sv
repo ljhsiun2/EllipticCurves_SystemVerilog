@@ -1,6 +1,5 @@
 module multiplier
-#(parameter P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F)
-(input logic Clk, Reset,
+(input logic clk, Reset,
 input logic [255:0] a, b,
 output logic Done,
 output logic [255:0] product);
@@ -9,14 +8,17 @@ logic [255:0] a_in, a_out, count_in, count_out;
 logic [257:0] b_in, b_out,c_in, c_out;
 logic a_load, b_load, c_load, count_load;
 
-reg_256 a_reg(.Clk, .Reset, .Load(a_load), .Data(a_in), .Out(a_out));
-reg_256 #(258) b_reg(.Clk, .Reset, .Load(b_load), .Data(b_in), .Out(b_out));
-reg_256 #(258) c_reg(.Clk, .Reset, .Load(c_load), .Data(c_in), .Out(c_out));
-reg_256 #(8) count(.Clk, .Reset, .Load(count_load), .Data(count_in), .Out(count_out));
+logic [255:0] P;
+assign P = params.n;
+
+reg_256 a_reg(.clk, .Load(a_load), .Data(a_in), .Out(a_out));
+reg_256 #(258) b_reg(.clk, .Load(b_load), .Data(b_in), .Out(b_out));
+reg_256 #(258) c_reg(.clk, .Load(c_load), .Data(c_in), .Out(c_out));
+reg_256 #(8) count(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
 
 	enum logic [2:0] {Init, Start, setB, redB, setC, Finish} State, Next_State;
 
-    always_ff @ (posedge Clk)
+    always_ff @ (posedge clk)
     begin
         if(Reset)
 		begin
