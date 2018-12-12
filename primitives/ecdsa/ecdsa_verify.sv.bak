@@ -1,0 +1,6 @@
+module ecdsa_verify (
+    input logic clk,
+    input signature ciphertext,
+    input curve_point pub_key,
+    output logic done_verify
+);

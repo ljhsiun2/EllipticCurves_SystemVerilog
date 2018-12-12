@@ -1,3 +1,4 @@
 output_files/*
 db/*
+!*.sv
 simulation/*

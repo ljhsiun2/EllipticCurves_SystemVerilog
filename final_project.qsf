@@ -102,11 +102,10 @@ set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/elg_decrypt_testbenc
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/top_level_testbench.sv -section_id top_level_testbench
 set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VERILOG_FILE "sha2-verilog/sha256.v"
+set_global_assignment -name VERILOG_FILE "sha2-verilog/sha2.v"
 set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_verify.sv
 set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign_control.sv
-set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_padder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_mainloop.sv
-set_global_assignment -name SYSTEMVERILOG_FILE primitives/hash/sha_256.sv
 set_global_assignment -name SYSTEMVERILOG_FILE components/elliptic_curve_structs.sv
 set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign_datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE primitives/ecdsa/ecdsa_sign.sv

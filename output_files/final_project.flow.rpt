@@ -1,5 +1,5 @@
 Flow report for final_project
-Tue Dec 11 03:05:50 2018
+Wed Dec 12 01:29:48 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Tue Dec 11 03:05:49 2018      ;
+; Flow Status                        ; Flow Failed - Wed Dec 12 01:29:47 2018      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; final_project                               ;
 ; Top-level Entity Name              ; final_top                                   ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/11/2018 03:05:34 ;
+; Start date & time ; 12/12/2018 01:29:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; final_project       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+----------------------------------------+---------------+-------------+-----------------------+
 ; Assignment Name                              ; Value                                  ; Default Value ; Entity Name ; Section Id            ;
 +----------------------------------------------+----------------------------------------+---------------+-------------+-----------------------+
-; COMPILER_SIGNATURE_ID                        ; 10995770589191.154451913412640         ; --            ; --          ; --                    ;
+; COMPILER_SIGNATURE_ID                        ; 10995770589191.154459977124916         ; --            ; --          ; --                    ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE             ; Speed                                  ; Balanced      ; --          ; --                    ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                     ; --            ; --          ; gen_point_testbench   ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                     ; --            ; --          ; square_root_testbench ;
@@ -142,8 +142,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4729 MB             ; 00:00:34                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4911 MB             ; 00:00:36                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

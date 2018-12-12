@@ -1,3 +1,5 @@
+import elliptic_curve_structs::*;
+
 module add
 	(input logic [255:0] a, b,
 	 input logic op,

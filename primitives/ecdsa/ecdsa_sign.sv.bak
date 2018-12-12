@@ -1,0 +1,13 @@
+module ecdsa_sign(
+    input logic clk,
+    input logic [11:0] message,
+    input logic [255:0] priv_key,
+    output signature my_signature,
+    output logic done
+)
+
+
+ecdsa_sign_datapath (.clk, .message, .priv_key, .my_signature,
+                     .done_signature(done));
+
+endmodule : ecdsa_sign

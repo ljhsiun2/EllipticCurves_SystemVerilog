@@ -5,10 +5,9 @@ timeunit 10ns;	// Half clock cycle at 50 MHz
 timeprecision 1ns;
 
 logic clk, Done;
-logic [255:0] message;
-logic [255:0] decrypted_x, decrypted_y;
-logic [255:0] chacha_key;
-logic [127:0] chacha_nonce;
+logic invalid_error;
+logic [95:0] message;
+logic [255:0] priv_key;
 
 //final_top #(256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F) final0(.*);
 final_top final0 (
@@ -33,8 +32,6 @@ initial begin: TEST_VECTORS
 // N = 2082454586705741226620595
 priv_key = $random();
 message = 96'hece498ece498ece498ece498;
-chacha_key = $random();
-chacha_nonce = $random();
 end
 
 endmodule : top_level_testbench

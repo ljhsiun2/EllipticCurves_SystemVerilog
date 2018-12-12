@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project
-Tue Dec 11 03:05:49 2018
+Wed Dec 12 01:29:47 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Dec 11 03:05:49 2018           ;
+; Analysis & Synthesis Status        ; Failed - Wed Dec 12 01:29:47 2018           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; final_project                               ;
 ; Top-level Entity Name              ; final_top                                   ;
@@ -164,20 +164,27 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 11 03:05:33 2018
+    Info: Processing started: Wed Dec 12 01:29:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 8 design units, including 8 entities, in source file sha2-verilog/sha256.v
+    Info (12023): Found entity 1: sha256_block File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 3
+    Info (12023): Found entity 2: sha256_round File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 63
+    Info (12023): Found entity 3: sha256_S0 File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 100
+    Info (12023): Found entity 4: sha256_S1 File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 111
+    Info (12023): Found entity 5: sha256_s0 File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 122
+    Info (12023): Found entity 6: sha256_s1 File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 133
+    Info (12023): Found entity 7: sha256_K_machine File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 144
+    Info (12023): Found entity 8: sha256_H_0 File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 184
+Info (12021): Found 4 design units, including 4 entities, in source file sha2-verilog/sha2.v
+    Info (12023): Found entity 1: sha2_round File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v Line: 2
+    Info (12023): Found entity 2: Ch File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v Line: 27
+    Info (12023): Found entity 3: Maj File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v Line: 38
+    Info (12023): Found entity 4: W_machine File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v Line: 49
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/ecdsa/ecdsa_verify.sv
     Info (12023): Found entity 1: ecdsa_verify File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/ecdsa/ecdsa_sign_control.sv
     Info (12023): Found entity 1: ecdsa_sign_control File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file primitives/hash/sha_padder.sv
-    Info (12023): Found entity 1: sha_padder File: C:/Users/Lucas/Documents/ece385/ecc/primitives/hash/sha_padder.sv Line: 4
-Warning (10259): Verilog HDL error at sha_mainloop.sv(11): constant value overflow File: C:/Users/Lucas/Documents/ece385/ecc/primitives/hash/sha_mainloop.sv Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file primitives/hash/sha_mainloop.sv
-    Info (12023): Found entity 1: sha_mainloop File: C:/Users/Lucas/Documents/ece385/ecc/primitives/hash/sha_mainloop.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file primitives/hash/sha_256.sv
-    Info (12023): Found entity 1: sha_256 File: C:/Users/Lucas/Documents/ece385/ecc/primitives/hash/sha_256.sv Line: 1
 Info (12021): Found 1 design units, including 0 entities, in source file components/elliptic_curve_structs.sv
     Info (12022): Found design unit 1: elliptic_curve_structs (SystemVerilog) File: C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/ecdsa/ecdsa_sign_datapath.sv
@@ -195,11 +202,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file rng/cha
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/modular_operations/square_root.sv
     Info (12023): Found entity 1: square_root File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/square_root.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/modular_operations/multiplier.sv
-    Info (12023): Found entity 1: multiplier File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv Line: 1
+    Info (12023): Found entity 1: multiplier File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/modular_operations/modular_inverse.sv
     Info (12023): Found entity 1: modular_inverse File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/modular_operations/add.sv
-    Info (12023): Found entity 1: add File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv Line: 1
+    Info (12023): Found entity 1: add File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/point_operations/point_double.sv
     Info (12023): Found entity 1: point_double File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file primitives/point_operations/point_add.sv
@@ -210,14 +217,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file compone
     Info (12023): Found entity 1: regfile File: C:/Users/Lucas/Documents/ece385/ecc/components/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file components/reg_256.sv
     Info (12023): Found entity 1: reg_256 File: C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv Line: 3
-Error (10161): Verilog HDL error at ecdsa_verify.sv(3): object "signature" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 3
-Error (10195): SystemVerilog Type Name error at ecdsa_verify.sv(4): "curve_point" is not a type File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 4
+Info (12127): Elaborating entity "final_top" for the top level hierarchy
+Info (12128): Elaborating entity "gen_point" for hierarchy "gen_point:init_point" File: C:/Users/Lucas/Documents/ece385/ecc/final_top.sv Line: 53
+Info (12128): Elaborating entity "reg_256" for hierarchy "gen_point:init_point|reg_256:priv" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv Line: 28
+Info (12128): Elaborating entity "reg_256" for hierarchy "gen_point:init_point|reg_256:mult_point_reg" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv Line: 34
+Info (12128): Elaborating entity "reg_256" for hierarchy "gen_point:init_point|reg_256:count_reg" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv Line: 43
+Info (12128): Elaborating entity "point_add" for hierarchy "gen_point:init_point|point_add:add0" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv Line: 51
+Info (12128): Elaborating entity "add" for hierarchy "gen_point:init_point|point_add:add0|add:add0" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv Line: 39
+Info (12128): Elaborating entity "modular_inverse" for hierarchy "gen_point:init_point|point_add:add0|modular_inverse:inv0" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv Line: 41
+Info (12128): Elaborating entity "multiplier" for hierarchy "gen_point:init_point|point_add:add0|multiplier:mult0" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv Line: 42
+Info (12128): Elaborating entity "reg_256" for hierarchy "gen_point:init_point|point_add:add0|multiplier:mult0|reg_256:b_reg" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv Line: 15
+Info (12128): Elaborating entity "point_double" for hierarchy "gen_point:init_point|point_double:doub0" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv Line: 57
+Info (12128): Elaborating entity "ecdsa_sign" for hierarchy "ecdsa_sign:ecdsa_sign" File: C:/Users/Lucas/Documents/ece385/ecc/final_top.sv Line: 60
+Info (12128): Elaborating entity "ecdsa_sign_datapath" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv Line: 30
+Info (12128): Elaborating entity "sha256_H_0" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_H_0:sha2_init_vals_1" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv Line: 49
+Info (12128): Elaborating entity "sha256_block" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at sha256.v(32): truncated value with size 32 to match size of target (7) File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 32
+Info (12128): Elaborating entity "sha256_round" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 42
+Info (12128): Elaborating entity "Ch" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round|Ch:Ch" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 73
+Info (12128): Elaborating entity "Maj" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round|Maj:Maj" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 77
+Info (12128): Elaborating entity "sha256_S0" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round|sha256_S0:S0" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 81
+Info (12128): Elaborating entity "sha256_S1" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round|sha256_S1:S1" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 85
+Info (12128): Elaborating entity "sha2_round" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_round:sha256_round|sha2_round:sha256_round_inner" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 94
+Info (12128): Elaborating entity "sha256_s0" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_s0:sha256_s0" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 44
+Info (12128): Elaborating entity "sha256_s1" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_s1:sha256_s1" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 45
+Info (12128): Elaborating entity "W_machine" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|W_machine:W_machine" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 53
+Info (12128): Elaborating entity "sha256_K_machine" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|sha256_block:sha256_sign|sha256_K_machine:sha256_K_machine" File: C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v Line: 57
+Info (12128): Elaborating entity "chacha" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|chacha:chacha20" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv Line: 62
+Info (12128): Elaborating entity "reg_256" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|chacha:chacha20|reg_256:roundReg" File: C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv Line: 41
+Info (12128): Elaborating entity "quarter_round" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_datapath:ecdsa_sign_datapath|chacha:chacha20|quarter_round:qr1" File: C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv Line: 43
+Info (12128): Elaborating entity "ecdsa_sign_control" for hierarchy "ecdsa_sign:ecdsa_sign|ecdsa_sign_control:ecdsa_sign_control" File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv Line: 36
+Info (12128): Elaborating entity "ecdsa_verify" for hierarchy "ecdsa_verify:ecdsa_verify" File: C:/Users/Lucas/Documents/ece385/ecc/final_top.sv Line: 67
+Warning (10240): Verilog HDL Always Construct warning at ecdsa_verify.sv(88): inferring latch(es) for variable "invalid_error", which holds its previous value in one or more paths through the always construct File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 88
+Error (10166): SystemVerilog RTL Coding error at ecdsa_verify.sv(88): always_comb construct does not infer purely combinational logic. File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 88
+Info (10041): Inferred latch for "invalid_error" at ecdsa_verify.sv(88) File: C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv Line: 88
+Error (12152): Can't elaborate user hierarchy "ecdsa_verify:ecdsa_verify" File: C:/Users/Lucas/Documents/ece385/ecc/final_top.sv Line: 67
 Info (144001): Generated suppressed messages file C:/Users/Lucas/Documents/ece385/ecc/output_files/final_project.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4729 megabytes
-    Error: Processing ended: Tue Dec 11 03:05:50 2018
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
+    Error: Peak virtual memory: 4911 megabytes
+    Error: Processing ended: Wed Dec 12 01:29:48 2018
     Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:34
+    Error: Total CPU time (on all processors): 00:00:36
 
 
 +------------------------------------------+

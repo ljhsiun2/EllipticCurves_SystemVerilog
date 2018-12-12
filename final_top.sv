@@ -25,10 +25,10 @@ module final_top (
 	input logic clk,
 
 	// Avalon-MM Slave Signals
-	input logic [11:0] message,
+	input logic [95:0] message,
 	input logic [255:0] priv_key,
 	output logic Done,
-	output logic [255:0] decrypted_x, decrypted_y
+	output logic invalid_error
 );
 
 // Registers we need to hold the message (1 reg = 8 chars)
@@ -40,16 +40,33 @@ assign Gx = 256'h79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F8179
 assign Gy = 256'h483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8;*/
 
 
-signature ciphertext;
+signature_t my_signature;
+curve_point_t pub_key;
+logic init_gen_done;
+/* init pub point Q */
+// TODO make multiple batches
+gen_point init_point (
+	.clk, .Reset(1'b0),
+	.privKey(priv_key),
+	.out_point(pub_key),
+	.Done(init_gen_done)
+);
 
 /* 7) return (r, s) */
 logic done_sign, done_verify;
-ecdsa_sign ecdsa_sign (.clk, .message, .priv_key,
-					   .my_signature(ciphertext), .done(done_sign));
+ecdsa_sign ecdsa_sign (
+	.clk, .message, .priv_key,
+    .my_signature, .done(done_sign)
+);
 
-ecdsa_verify ecdsa_verify(.clk, .ciphertext, .pub_key, .done(done_verify));
+ecdsa_verify ecdsa_verify(
+	.clk, .reset(init_gen_done && done_sign),
+	.message,
+	.my_signature, .pub_key,
+	.done_verify, .invalid_error
+);
 //
-
+assign Done = done_verify;
 
 //assign EXPORT_DATA = 32'hFFFFFFFF;
 
