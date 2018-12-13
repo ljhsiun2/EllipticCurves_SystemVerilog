@@ -7,6 +7,8 @@ module multiplier (
 	output 	logic [255:0] 		product
 );
 
+/* multiplication using bit shifting and adding */
+
 logic [255:0] a_in, a_out, count_in, count_out;
 logic [257:0] b_in, b_out,c_in, c_out;
 logic a_load, b_load, c_load, count_load;
@@ -14,7 +16,7 @@ logic a_load, b_load, c_load, count_load;
 reg_256 a_reg(.clk, .Load(a_load), .Data(a_in), .Out(a_out));
 reg_256 #(258) b_reg(.clk, .Load(b_load), .Data(b_in), .Out(b_out));
 reg_256 #(258) c_reg(.clk, .Load(c_load), .Data(c_in), .Out(c_out));
-reg_256 #(8) count(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
+reg_256 #(256) count(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
 
 enum logic [2:0] {
 	Init, Start,
@@ -40,14 +42,14 @@ always_comb begin
 		Start: Next_State = setB;
 		setB:
 		begin
-			if((b_out << 1) >= {2'b00,params.n})
+			if((b_out << 1) >= {2'b00,params.p})
 				Next_State = redB;
 			else
 				Next_State = setC;
 		end
 		redB:
 		begin
-			if(b_out >= {2'b00,params.n})
+			if(b_out >= {2'b00,params.p})
 				Next_State = redB;
 			else
 				Next_State = setC;
@@ -108,8 +110,8 @@ always_comb begin
 		redB:
 		begin
 			b_load = 1'b1;
-			if(b_out >= {2'b00, params.n})
-				b_in = b_out - {2'b00,params.n};
+			if(b_out >= {2'b00, params.p})
+				b_in = b_out - {2'b00,params.p};
 			else
 				b_in = b_out;
 		end
@@ -118,15 +120,15 @@ always_comb begin
 			c_load = 1'b1;
 			if(a_out[0] == 1'b1)
 			begin
-				if((c_out + b_out) >= {2'b00, params.n})
-					c_in = (c_out + b_out) - {2'b00, params.n};
+				if((c_out + b_out) >= {2'b00, params.p})
+					c_in = (c_out + b_out) - {2'b00, params.p};
 				else
 					c_in = c_out + b_out;
 			end
 			else
 			begin
-				if(c_out >= {2'b00, params.n})
-					c_in = c_out - params.n;
+				if(c_out >= {2'b00, params.p})
+					c_in = c_out - params.p;
 				else
 					c_in = c_out;
 			end
@@ -136,14 +138,14 @@ always_comb begin
 		end
 		Finish:
 		begin
-			if(c_out < params.n)
+			if(c_out < params.p)
 			begin
 				Done = 1'b1;
 				product = c_out[255:0];
 			end
 			else
 			begin
-				c_in = c_out - {2'b00,params.n};
+				c_in = c_out - {2'b00,params.p};
 				c_load = 1'b1;
 				Done = 1'b0;
 			end

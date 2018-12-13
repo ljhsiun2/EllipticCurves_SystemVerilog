@@ -1,11 +1,17 @@
-module ecdsa_verify #(parameter MSG_SIZE=96)(
+import elliptic_curve_structs::*;
+
+module ecdsa_verify_datapath #(parameter MSG_SIZE=96)(
     input logic             clk,
     input logic             reset,
     input signature_t       my_signature,
     input [95:0]            message,
     input curve_point_t     pub_key,
     output logic            done_verify,
-    output logic            invalid_error
+    output logic            invalid_error,
+
+    input logic             start_hash,
+    input logic             load_hash,
+    output logic            done_hash
 );
 /* CHECKS */
 /* -- pub_key is on curve (done in ecdsa sign) */
@@ -13,10 +19,11 @@ module ecdsa_verify #(parameter MSG_SIZE=96)(
       massive compilation times */
 
 logic [255:0] r, s;
-logic [255:0] msg_hash;
+logic [255:0] msg_hash, msg_hash_out;
 logic done_hash;
 assign r = my_signature.r;
 assign s = my_signature.s;
+reg_256 hash_reg(.clk, .Load(load_hash), .Data(msg_hash), .Out(msg_hash_out));
 
 /* 1) verify r, s within bounds (done in control) */
 
@@ -37,7 +44,7 @@ logic [255:0] inv_s;
 logic done_mod_inv;
 modular_inverse mod_inv_verify (
     .clk, .Reset(reset),
-    .in(s), .out(inv_s), .Done(done_mod_inv)
+    .in({256'd0,s}), .out(inv_s), .Done(done_mod_inv)
 );
 
 /* 4) calculate u = zw mod n and v = rw mod n */
@@ -45,7 +52,7 @@ logic [255:0] u, v;
 logic done_u, done_v;
 multiplier create_u (
     .clk, .Reset(reset | ~done_mod_inv),
-    .a(inv_s), .b(msg_hash),
+    .a(inv_s), .b(msg_hash_out),
     .product(u),
     .Done(done_u)
 );
@@ -89,4 +96,4 @@ always_comb begin
     if(verified_point.x != r)
         invalid_error = 1'b1;
 end
-endmodule : ecdsa_verify
+endmodule : ecdsa_verify_datapath

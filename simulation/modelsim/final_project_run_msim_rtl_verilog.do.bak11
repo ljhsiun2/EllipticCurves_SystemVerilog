@@ -5,19 +5,25 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/reg_256.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/add.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/multiplier.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/modular_inverse.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/square_root.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/point_double.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/point_add.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/gen_point.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/elg_decrypt.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/elg_encrypt.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project {C:/Users/Lucas/Documents/ece385/final_project/final_top.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog {C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog {C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components {C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng {C:/Users/Lucas/Documents/ece385/ecc/rng/quarter_round.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components {C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng {C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc {C:/Users/Lucas/Documents/ece385/ecc/final_top.sv}
 
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/final_project/testbenches {C:/Users/Lucas/Documents/ece385/final_project/testbenches/top_level_testbench.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/testbenches {C:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_level_testbench
 

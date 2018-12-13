@@ -4,34 +4,37 @@ module ecdsa_sign_datapath #(parameter MSG_SIZE=96) (
     /* wires for signing */
     input   logic               clk,
     input   logic               reset,
+    input   logic               start_hash,
+    input   logic               load_hash,
     input   logic [95:0]        message,
     input   logic [255:0]       priv_key,
 
     /* wires to control */
     output  signature_t         my_signature,
-    output  curve_point_t       pub_point,
     output  logic               done_create_signature,
+    output  logic               done_hash,
     input   logic [255:0]       chacha_key,
     input   logic [127:0]       chacha_nonce
 );
 
-logic done_mod, done_hash, done_chacha, done_gen_point;
+logic done_mod, done_chacha, done_gen_point;
 logic [255:0] hash, msg_hash_out;
 logic [511:0] stream_out;
-logic [512:0] mod_in;
+logic [255:0] mod_in;
 logic [255:0] created_signature;
 logic [255:0] inv_k;
 
-initial begin
-    done_mod = 1'b0;
-    done_hash = 1'b0;
-    done_chacha = 1'b0;
+curve_point_t kG;
 
-    hash = 0;
-end
+// initial begin
+//     done_mod = 1'b0;
+//     done_hash = 1'b0;
+//     done_chacha = 1'b0;
+//
+// end
 
 // load hash reg once sha256 is done
-reg_256 hash_reg(.clk, .Load(done_hash), .Data(hash), .Out(msg_hash_out));
+reg_256 hash_reg(.clk, .Load(load_hash), .Data(hash), .Out(msg_hash_out));
 
 /* ---- SETUP ----- */
 // some key d has already been created; see top_level_testbench
@@ -48,7 +51,7 @@ assign d = priv_key;
 logic [255:0] hash_init;
 sha256_H_0 sha2_init_vals_1 (.H_0(hash_init));
 sha256_block sha256_sign(
-    .clk, .rst(reset), .input_valid(reset),
+    .clk, .rst(reset), .input_valid(start_hash),
     .M_in({message, 416'd0}), .H_in(hash_init),
     .H_out(hash),
     .output_valid(done_hash)
@@ -58,18 +61,19 @@ sha256_block sha256_sign(
 
 /* 3) select random integer k from [1, n-1] (use chacha20) */
 // TODO use real sources of entropy
+logic [255:0] blinding_k;
+
 chacha chacha20(.clk, .Reset(reset),
 				.key(chacha_key), .nonce(chacha_nonce), .stream(stream_out), .Done(done_chacha));
 reg_256 chacha_reg(.clk, .Load(done_chacha), .Data(stream_out[255:0]), .Out(blinding_k));
-logic [255:0] blinding_k;
 
 
 
 /* 4) calculate curve point (x, y) = k*G */
 gen_point gen_point (
-    .clk, .Reset(reset),
+    .clk, .Reset(~done_chacha),
     .privKey(blinding_k),
-    .in_point(params.base_point), .out_point(pub_point),
+    .in_point(params.base_point), .out_point(kG),
     .Done(done_gen_point)
 );
 
@@ -79,9 +83,9 @@ gen_point gen_point (
 /* 6) calculate s = inv_k*(z + r*d_a) mod n. if s = 0, go back to 3. */
 
 // TODO multiplication is very costly; reduce maybe?
-assign mod_in = msg_hash_out + pub_point.x*d;
+assign mod_in = msg_hash_out + kG.x*d;
 modular_inverse mod_inv_sign(
-    .clk, .Reset(reset | ~done_gen_point), .in(blinding_k),
+    .clk, .Reset(reset | ~done_gen_point), .in({256'd0, blinding_k}),
     .out(inv_k), .Done(done_mod)
 );
 // start multiplying when mod is finished
@@ -92,6 +96,6 @@ multiplier create_sig (
     .Done(done_create_signature)
 );
 
-assign my_signature = '{pub_point.x, created_signature};
+assign my_signature = '{kG.x, created_signature};
 
 endmodule : ecdsa_sign_datapath

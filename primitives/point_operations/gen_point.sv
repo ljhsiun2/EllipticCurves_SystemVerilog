@@ -1,77 +1,94 @@
 import elliptic_curve_structs::*;
 
-module gen_point
-(
-	input 	logic 				clk,
-	input 	logic 				Reset,
-	input 	logic [255:0] 		privKey,
-	input 	curve_point_t 		in_point,
-	output 	curve_point_t 		out_point,
-	output 	logic 				Done
+module gen_point (
+	input 	logic 			clk, Reset,
+	input 	logic [255:0] 	privKey,
+	input 	curve_point_t 	in_point,
+	output 	curve_point_t 	out_point,
+	output 	logic 			Done
 );
 
-enum logic [2:0] {Init, Inc, Double, Add, Finish} State, Next_State;
-
-logic [255:0] priv_in, priv_out;
-curve_point_t out_point_in;
-// logic [255:0] add_x_out, add_y_out, mult_x_out, mult_y_out, mult_x_in, mult_y_in, point_doub_x, point_doub_y;
-curve_point_t add_point_out, mult_point_in, mult_point_out, point_doub_out;
-logic [7:0] count_in, count_out;
-logic priv_load, point_load, add_done, mult_done, count_load, mult_point_load;
-logic add_reset, mult_reset;
-
-logic [255:0] gx, gy;
-assign gx = in_point.x;
-assign gy = in_point.y;
-
-//Private key register - will be shifted each round to check LSB
-reg_256 priv(.clk, .Load(priv_load), .Data(priv_in), .Out(priv_out));
-
-//Registers responsible for point doubling: 1G -> 2G -> 4G -> ...
-reg_256 #($bits(curve_point_t)) mult_point_reg(
-	.clk, .Load(mult_point_load),
-	.Data(mult_point_in), .Out(mult_point_out)
-);
-
-//Registers keeping track of public key calculation
-reg_256 #($bits(curve_point_t)) pub_point_reg(
-	.clk, .Load(point_load),
-	.Data(out_point_in), .Out(out_point)
-);
-
-//Counter
-reg_256 #(8) count_reg(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
+	enum logic [2:0] {Init, find_start, Inc, Double, Add, Finish} State, Next_State;
 
 
-//Point addition and point doubling module instantiations
+	logic [255:0] priv_in, priv_out, x_in, x_out, y_in, y_out;
+	logic [255:0] add_x_out, add_y_out, mult_x_out, mult_y_out, mult_x_in, mult_y_in, point_doub_x, point_doub_y;
+	logic [7:0] count_in, count_out;
+	logic priv_load, x_load, y_load, add_done, mult_done, count_load, add_reset, mult_reset, mult_x_load, mult_y_load;
+
+	logic [255:0] gx, gy;
+	assign gx = in_point.x;
+	assign gy = in_point.y;
+
+	//Private key register - will be shifted each round to check LSB
+	reg_256 priv(.clk, .Load(priv_load), .Data(priv_in), .Out(priv_out));
+
+	//Registers responsible for point doubling: 1G -> 2G -> 4G -> ...
+	reg_256 mult_x(.clk, .Load(mult_x_load), .Data(mult_x_in), .Out(mult_x_out));
+	reg_256 mult_y(.clk, .Load(mult_y_load), .Data(mult_y_in), .Out(mult_y_out));
+
+	//Registers keeping track of public key calculation
+	reg_256 x(.clk, .Load(x_load), .Data(x_in), .Out(x_out));
+	reg_256 y(.clk, .Load(y_load), .Data(y_in), .Out(y_out));
+
+	//Counter
+	logic start_bit_load;
+	logic [7:0] start_bit_in, start_bit_out;
+	reg_256 #(8) count_reg(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
+	reg_256 #(8) start_bit_reg(.clk, .Load(start_bit_load), .Data(start_bit_in), .Out(start_bit_out));
+
+
+	//Point addition and point doubling module instantiations
+// TODO make less messy
+curve_point_t add_R, add_P, add_Q;
+assign add_P.x = mult_x_out;
+assign add_Q.x = x_out;
+assign add_P.y = mult_y_out;
+assign add_Q.y = y_out;
 point_add add0(.clk, .Reset(add_reset),
-	.P(mult_point_out), .Q(out_point),
-	.R(add_point_out),
+	.P(add_P), .Q(add_Q),
+	.R(add_R),
 	.Done(add_done)
 );
+assign add_x_out = add_R.x;
+assign add_y_out = add_R.y;
 
+
+
+curve_point_t doub_R, doub_P;
+assign doub_P.x = mult_x_out;
+assign doub_P.y = mult_y_out;
 point_double doub0(.clk, .Reset(mult_reset),
-	.P(mult_point_out),
-	.R(point_doub_out),
+	.P(doub_P),
+	.R(doub_R),
 	.Done(mult_done)
 );
+assign point_doub_x = doub_R.x;
+assign point_doub_y = doub_R.y;
 
+logic flag;
+assign flag = priv_out[0];
 
-always_ff @ (posedge clk)
-begin
-    if(Reset)
-	begin
-        State <= Init;
-	end
-    else
-        State <= Next_State;
-end
+    always_ff @ (posedge clk)
+    begin
+        if(Reset)
+		begin
+            State <= Init;
+		end
+        else
+            State <= Next_State;
+    end
 
 //Next state logic
 always_comb begin
     Next_State = State;
     unique case(State)
-		Init: Next_State = Add;
+		Init: Next_State = find_start;
+		find_start : begin
+			if(privKey[start_bit_out-1] == 1'b1)
+				Next_State = Add;
+			else Next_State = find_start;
+		end
 		Inc: Next_State = Add;	//Skips doubling for the first round since the multiplication register are init to Gx, Gy
 		Double:
 		begin
@@ -82,11 +99,11 @@ always_comb begin
 		end
 		Add:
 		begin
-			if((out_point == curve_point_t'(0)) && priv_out[0] == 1'b1)
+			if(x_out == 0 && y_out == 0 && priv_out[0] == 1'b1)
 				Next_State = Double;
 			else if(add_done == 1'b0 && priv_out[0] == 1'b1)	//Stays here until point add finishes up
 				Next_State = Add;
-			else if(count_out == 255)
+			else if(count_out == start_bit_out)
 			begin
 				if(add_done == 1'b1)
 					Next_State = Finish;
@@ -102,21 +119,28 @@ always_comb begin
 
 	//Default vals
 	priv_in = priv_out;
-	out_point_in = out_point;
+	x_in = x_out;
+	y_in = y_out;
 	count_in = count_out;
-	mult_point_in = mult_point_out;
+	mult_x_in = mult_x_out;
+	mult_y_in = mult_y_out;
 
 	priv_load = 1'b0;
-	point_load = 1'b0;
+	x_load = 1'b0;
+	y_load = 1'b0;
 	count_load = 1'b0;
-	mult_point_load = 1'b0;
+	mult_x_load = 1'b0;
+	mult_y_load = 1'b0;
 
 	add_reset = 1'b0;
 	mult_reset = 1'b0;
 	Done = 1'b0;
-	// 
-	// out_point.x = 256'b0;
-	// out_point.y = 256'b0;
+
+	out_point.x = 256'd0;
+	out_point.y = 256'd0;
+
+	start_bit_load = 0;
+	start_bit_in = 8'd256;
 
 	unique case(State)
 		Init:
@@ -126,26 +150,36 @@ always_comb begin
 
 			//Initialize public key registers with (0,0), a point not on the curve
 			//add_point will not work properly with this point, so this provides a check
-			point_load = 1'b1;
-			out_point_in.x = 0;
-			out_point_in.y = 0;
+			x_load = 1'b1;
+			y_load = 1'b1;
+			x_in = 0;
+			y_in = 0;
 
 			//Init counter to 0
 			count_in = 8'b0;
 			count_load = 1'b1;
+			start_bit_load = 1'b1;
+			start_bit_in = 8'd256;
 
 			//multiplier registers hold value of generator to start
-			mult_point_in.x = gx;
-			mult_point_in.y = gy;
-			// mult_y_in = gy;
-			// mult_x_in = gx;
-			mult_point_load = 1'b1;
+			mult_x_in = gx;
+			mult_y_in = gy;
+			mult_x_load = 1'b1;
+			mult_y_load = 1'b1;
 
 			//Load private key reg
 			priv_load = 1'b1;
 			priv_in = privKey;
 
 		end
+
+		find_start : begin
+			priv_in = privKey;
+			priv_load = 1'b1;
+			start_bit_load = 1'b1;
+			start_bit_in = start_bit_out - 1;
+		end
+
 		Inc:
 		begin
 			//increment counter
@@ -160,14 +194,17 @@ always_comb begin
 		Double:
 		begin
 			//Update multiplication registers
-			mult_point_load = 1'b1;
+			mult_x_load = 1'b1;
+			mult_y_load = 1'b1;
 			if(mult_done == 1'b1)
 			begin
-				mult_point_in = point_doub_out;
+				mult_x_in = point_doub_x;
+				mult_y_in = point_doub_y;
 			end
 			else
 			begin
-				mult_point_in = mult_point_out;
+				mult_x_in = mult_x_out;
+				mult_y_in = mult_y_out;
 			end
 		end
 		Add:
@@ -175,28 +212,32 @@ always_comb begin
 			mult_reset = 1'b1;
 			if(priv_out[0] == 1'b1)
 			begin
-				point_load = 1'b1;
-				if(out_point == curve_point_t'(0))//Since (0,0) does not lie on the curve, we use it to indicate no adds have been completed yet
+				x_load = 1'b1;
+				y_load = 1'b1;
+				if(x_out == 0 && y_out == 0)//Since (0,0) does not lie on the curve, we use it to indicate no adds have been completed yet
 				begin
-					out_point_in = mult_point_out;
+					x_in = mult_x_out;
+					y_in = mult_y_out;
 				end
 				else	//Normal point addition
 				begin
 					if(add_done == 1'b1)
 					begin
-						out_point_in = add_point_out;
+						x_in = add_x_out;
+						y_in = add_y_out;
 					end
 				end
 			end
 			else	//Do nothing
 			begin
-				out_point_in = out_point;
+				x_in = x_out;
+				y_in = y_out;
 			end
 		end
 		Finish:
 		begin
-			// out_point.x = x_out;
-			// out_point.y = y_out;
+			out_point.x = x_out;
+			out_point.y = y_out;
 			Done = 1'b1;
 		end
 		default:;

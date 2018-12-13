@@ -23,7 +23,7 @@ Register Map:
 module final_top (
 	// Avalon Clock Input
 	input logic clk,
-
+	input logic reset,
 	// Avalon-MM Slave Signals
 	input logic [95:0] message,
 	input logic [255:0] priv_key,
@@ -46,21 +46,23 @@ logic init_gen_done;
 /* init pub point Q */
 // TODO make multiple batches
 gen_point init_point (
-	.clk, .Reset(1'b0),
+	.clk, .Reset(reset),
 	.privKey(priv_key),
-	.out_point(pub_key),
+	.in_point(params.base_point), .out_point(pub_key),
 	.Done(init_gen_done)
 );
 
 /* 7) return (r, s) */
 logic done_sign, done_verify;
 ecdsa_sign ecdsa_sign (
-	.clk, .message, .priv_key,
+	.clk, .master_reset(reset), .init(init_gen_done),
+	.message, .priv_key,
     .my_signature, .done(done_sign)
 );
 
 ecdsa_verify ecdsa_verify(
-	.clk, .reset(init_gen_done && done_sign),
+	.clk, .reset(reset | (init_gen_done && done_sign)),
+	.init_verify(done_sign),
 	.message,
 	.my_signature, .pub_key,
 	.done_verify, .invalid_error

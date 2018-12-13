@@ -13,7 +13,7 @@ always_comb
 begin
 	if(op) begin
 			temp1 = a-b;
-			temp2 = (a-b) + params.n;
+			temp2 = (a-b) + params.p;
 			if(temp1[256])
 				sum = temp2[255:0];
 			else
@@ -21,8 +21,8 @@ begin
 	end
 	else begin
 		temp1 = a + b;
-		temp2 = (a + b) - params.n;
-		if(temp1 >= params.n)
+		temp2 = (a + b) - params.p;
+		if(temp1 >= params.p)
 			sum = temp2[255:0];
 		else
 			sum = temp1[255:0];

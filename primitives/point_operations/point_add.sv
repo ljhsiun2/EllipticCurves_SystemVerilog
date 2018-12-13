@@ -1,3 +1,5 @@
+import elliptic_curve_structs::*;
+
 module point_add (
 	input 	logic 			clk, Reset,
 	input  	curve_point_t 	P, Q,
@@ -21,12 +23,14 @@ module point_add (
 	// Rx = s*s - Px - Qx
 	// Ry = s(Px - Rx) - Py
 
+	/* code for testbench */
 	always_ff @ (posedge clk)
 	begin
 		if(Reset) begin
 			counter <= 0;
 			reset2 <= 1'b0;
 		end
+
 		else
 		begin
 			if(mult1_done)
@@ -39,6 +43,7 @@ module point_add (
 	add add0(.a(P.y), .b(Q.y), .op(1'b1), .sum(sum0));	// Py - Qy
 	add add1(.a(P.x), .b(Q.x), .op(1'b1), .sum(sum1));	// Px - Qx
 	modular_inverse inv0(.clk, .Reset, .in({256'b0, sum1}), .out(inv1), .Done(inv_done)); //1/Px-Qx
+
 	multiplier mult0(.clk, .Reset(~inv_done | Reset), .a(sum0), .b(inv1), .Done(mult0_done), .product(s)); //slope
 
 	multiplier mult1(.clk, .Reset(~mult0_done | Reset), .a(s), .b(s), .Done(mult1_done), .product(prod2)); // s^2

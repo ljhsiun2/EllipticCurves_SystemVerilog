@@ -1,5 +1,5 @@
 Flow report for final_project
-Wed Dec 12 01:29:48 2018
+Thu Dec 13 13:07:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Dec 12 01:29:47 2018      ;
+; Flow Status                        ; Successful - Thu Dec 13 13:07:50 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; final_project                               ;
 ; Top-level Entity Name              ; final_top                                   ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE115F29C7                               ;
+; Family                             ; Cyclone 10 LP                               ;
+; Device                             ; 10CL080YF780C6G                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 348,402                                     ;
+;     Total combinational functions  ; 348,141                                     ;
+;     Dedicated logic registers      ; 70,160                                      ;
+; Total registers                    ; 70160                                       ;
+; Total pins                         ; 356                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 240                                         ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/12/2018 01:29:32 ;
+; Start date & time ; 12/13/2018 12:19:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; final_project       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+----------------------------------------+---------------+-------------+-----------------------+
 ; Assignment Name                              ; Value                                  ; Default Value ; Entity Name ; Section Id            ;
 +----------------------------------------------+----------------------------------------+---------------+-------------+-----------------------+
-; COMPILER_SIGNATURE_ID                        ; 10995770589191.154459977124916         ; --            ; --          ; --                    ;
+; COMPILER_SIGNATURE_ID                        ; 10995770589191.154472519145376         ; --            ; --          ; --                    ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE             ; Speed                                  ; Balanced      ; --          ; --                    ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                     ; --            ; --          ; gen_point_testbench   ;
 ; EDA_DESIGN_INSTANCE_NAME                     ; NA                                     ; --            ; --          ; square_root_testbench ;
@@ -116,7 +116,6 @@ refer to the applicable agreement for further details.
 ; EDA_TIME_SCALE                               ; 1 ns                                   ; --            ; --          ; eda_simulation        ;
 ; MAX_CORE_JUNCTION_TEMP                       ; 85                                     ; --            ; --          ; --                    ;
 ; MIN_CORE_JUNCTION_TEMP                       ; 0                                      ; --            ; --          ; --                    ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE                  ; 1.2V                                   ; --            ; --          ; --                    ;
 ; NUM_PARALLEL_PROCESSORS                      ; All                                    ; --            ; --          ; --                    ;
 ; PARTITION_COLOR                              ; -- (Not supported for targeted family) ; --            ; final_top   ; Top                   ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL          ; -- (Not supported for targeted family) ; --            ; final_top   ; Top                   ;
@@ -142,8 +141,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4911 MB             ; 00:00:36                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis ; 00:47:25     ; 1.1                     ; 10275 MB            ; 00:45:03                           ;
+; Total                ; 00:47:25     ; --                      ; --                  ; 00:45:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

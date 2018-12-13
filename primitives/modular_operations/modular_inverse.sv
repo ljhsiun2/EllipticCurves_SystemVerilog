@@ -1,3 +1,5 @@
+import elliptic_curve_structs::*;
+
 module modular_inverse (
 	input logic clk, Reset,
 	input logic [511:0] in,
@@ -101,7 +103,7 @@ module modular_inverse (
 			Init:
 			begin
 				u_in = in;
-				v_in = params.n;
+				v_in = params.p;
 				Done = 1'b0;
 				g1_in = 512'b01;
 				g2_in = 512'b0;
@@ -119,7 +121,7 @@ module modular_inverse (
 				if(g1_out[0] == 0)
 					g1_in = g1_out >> 1;
 				else
-					g1_in = (g1_out + params.n) >> 1;
+					g1_in = (g1_out + params.p) >> 1;
 				if(u_out != 512'b01 && u_out[0] == 0)
 				begin
 					u_load = 1'b1;
@@ -132,7 +134,7 @@ module modular_inverse (
 				if(g2_out[0] == 0)
 					g2_in = g2_out >> 1;
 				else
-					g2_in = (g2_out + params.n) >> 1;
+					g2_in = (g2_out + params.p) >> 1;
 				if(v_out != 512'b01 && v_out[0] == 0)
 				begin
 					v_load = 1'b1;
