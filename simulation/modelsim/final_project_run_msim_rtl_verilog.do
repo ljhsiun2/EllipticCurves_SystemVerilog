@@ -10,17 +10,19 @@ vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog {C:
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components {C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng {C:/Users/Lucas/Documents/ece385/ecc/rng/quarter_round.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components {C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_control.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng {C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_control.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations {C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv}
-vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_datapath.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_datapath.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify.sv}
+vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign {C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign.sv}
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc {C:/Users/Lucas/Documents/ece385/ecc/final_top.sv}
 
 vlog -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/testbenches {C:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv}

@@ -3,8 +3,8 @@ import elliptic_curve_structs::*;
 module ecdsa_verify_datapath #(parameter MSG_SIZE=96)(
     input logic             clk,
     input logic             reset,
-    input signature_t       my_signature,
     input [95:0]            message,
+	 input signature_t		 my_signature,
     input curve_point_t     pub_key,
     output logic            done_verify,
     output logic            invalid_error,
@@ -20,7 +20,6 @@ module ecdsa_verify_datapath #(parameter MSG_SIZE=96)(
 
 logic [255:0] r, s;
 logic [255:0] msg_hash, msg_hash_out;
-logic done_hash;
 assign r = my_signature.r;
 assign s = my_signature.s;
 reg_256 hash_reg(.clk, .Load(load_hash), .Data(msg_hash), .Out(msg_hash_out));
@@ -33,7 +32,7 @@ reg_256 hash_reg(.clk, .Load(load_hash), .Data(msg_hash), .Out(msg_hash_out));
 logic [255:0] hash_init;
 sha256_H_0 sha2_init_vals_2 (.H_0(hash_init));
 sha256_block sha256_verify(
-    .clk, .rst(reset), .input_valid(reset),
+    .clk, .rst(reset), .input_valid(start_hash),
     .M_in({message, 416'd0}), .H_in(hash_init),
     .H_out(msg_hash),
     .output_valid(done_hash)

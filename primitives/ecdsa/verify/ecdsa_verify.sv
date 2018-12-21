@@ -14,19 +14,21 @@ module ecdsa_verify #(parameter MSG_SIZE=96)(
 /* -- pub_key is on curve (done in ecdsa sign) */
 /* -- TODO check n * Q == O and Q != O; not done currently bc
       massive compilation times */
+logic start_hash, done_hash, load_hash;
 
 
-module ecdsa_verify_datapath (.clk, .reset,
+ecdsa_verify_datapath ecdsa_verify_datapath (
+	 .clk, .reset,
     .my_signature, .message, .pub_key,
     .done_verify, .invalid_error,
     .start_hash, .load_hash, .done_hash
 );
 
-logic start_hash, done_hash, load_hash;
 
-module ecdsa_verify_control (.clk, .init_verify, .reset,
-    .start_hash, .load_hash, .done_hash,
-
+ecdsa_verify_control ecdsa_verify_control (.clk, .reset,
+    .done_verify,
+    .done_hash, .load_hash, .start_hash,
+    .init_verify
 );
 
 

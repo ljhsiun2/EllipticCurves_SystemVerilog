@@ -31,9 +31,9 @@ initial begin: TEST_VECTORS
 // Gx = 338530205676502674729549372677647997389429898939
 // Gy = 842365456698940303598009444920994870805149798382
 // N = 2082454586705741226620595
-priv_key = 5;
+priv_key = 6;
 // message = 96'hece498ece498ece498ece498;
-message = 96'd616263; // abc
+message = 96'h616263; // abc
 reset = 1;
 #2 reset = 0;
 end

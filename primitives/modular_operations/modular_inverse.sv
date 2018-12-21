@@ -16,12 +16,13 @@ module modular_inverse (
 	*/
 
 	//Control Signals
-	logic u_load, v_load, g1_load, g2_load, status;
+	logic u_load, v_load, g1_load, g2_load, status, count_load;
 	logic [511:0] u_in, u_out, g1_in, g1_out, g2_in, g2_out;
 	logic [511:0] v_in, v_out;
+	logic [10:0] count_in, count_out;
 
 	//State machine states
-	enum logic [2:0] {Init, Start, Check_u, Check_v, Check_deg, Finish} State, Next_State;
+	enum logic [2:0] {Init, Start, Check_u, Check_v, Check_deg, Finish, Wait} State, Next_State;
 
 
 	//Register Instatntations
@@ -29,6 +30,8 @@ module modular_inverse (
 	reg_256 #(512) v(.clk, .Load(v_load), .Data(v_in), .Out(v_out));
 	reg_256 #(512) g1(.clk, .Load(g1_load), .Data(g1_in), .Out(g1_out));
 	reg_256 #(512) g2(.clk, .Load(g2_load), .Data(g2_in), .Out(g2_out));
+
+	reg_256 #(11) counter(.clk, .Load(count_load), .Data(count_in), .Out(count_out));
 
 	//State machine behavior
 	always_ff @ (posedge clk)
@@ -51,7 +54,7 @@ module modular_inverse (
 			Start:
 			begin
 				if(u_out == 512'b01 || v_out == 512'b01)
-					Next_State = Finish;
+					Next_State = Wait;
 				else if(u_out[0] == 0)
 					Next_State = Check_u;
 				else if(v_out[0] == 0)
@@ -79,6 +82,7 @@ module modular_inverse (
 			begin
 				Next_State = Start;
 			end
+			Wait : if(count_out == 11'd470) Next_State = Finish;
 			Finish:
 			begin
 				Next_State = Finish;
@@ -97,7 +101,8 @@ module modular_inverse (
 		g2_load = 1'b0;
 		out = 256'b0;
 		Done = 1'b0;
-
+		count_load = 1'b1;
+		count_in = count_out + 1;
 	//Preform algorithm steps
 		unique case(State)
 			Init:
@@ -111,6 +116,7 @@ module modular_inverse (
 				v_load = 1'b1;
 				g1_load = 1'b1;
 				g2_load = 1'b1;
+				count_in = 0;
 			end
 			Start:
 			begin
@@ -158,6 +164,10 @@ module modular_inverse (
 					v_load = 1'b1;
 					g2_load = 1'b1;
 				end
+			end
+			Wait : begin
+				if(count_out != 11'd470)
+					count_in = count_out + 1;
 			end
 			Finish:
 			begin

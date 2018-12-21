@@ -10,8 +10,8 @@ cModel Technology
 Z0 dC:/Users/Lucas/Documents/ece385/ecc/simulation/modelsim
 vadd
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 DXx4 work 22 elliptic_curve_structs 0 22 cYK?T=[G86MQ^_m4Q=<8e3
-DXx4 work 11 add_sv_unit 0 22 NE[?^E0DHA6IR]OEV15bG3
+Z2 DXx4 work 22 elliptic_curve_structs 0 22 V69]0zCh[W_h6=IOd_IjB0
+DXx4 work 11 add_sv_unit 0 22 9>];AAKS=nI>1SSLn<I?Q3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
@@ -27,7 +27,7 @@ Z5 8C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv
 Z6 FC:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv
 L0 3
 Z7 OV;L;10.5b;63
-Z8 !s108 1544732199.000000
+Z8 !s108 1544772566.000000
 Z9 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/add.sv|
 !i113 1
@@ -37,13 +37,13 @@ Z13 tCvgOpt 0
 Xadd_sv_unit
 R1
 R2
-VNE[?^E0DHA6IR]OEV15bG3
+V9>];AAKS=nI>1SSLn<I?Q3
 r1
 !s85 0
 31
 !i10b 1
 !s100 7f[dMIVi_hC3@9OFi5=K81
-INE[?^E0DHA6IR]OEV15bG3
+I9>];AAKS=nI>1SSLn<I?Q3
 !i103 1
 S1
 R0
@@ -61,7 +61,7 @@ R12
 R13
 vCh
 R1
-Z14 !s110 1544732198
+Z14 !s110 1544772564
 !i10b 1
 !s100 DeZ@YXnM0Q=J@XNoz[K4^2
 IDQU0=WTVWbW47j;eS>M8R3
@@ -77,7 +77,7 @@ R7
 r1
 !s85 0
 31
-Z19 !s108 1544732197.000000
+Z19 !s108 1544772564.000000
 Z20 !s107 C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v|
 Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog|C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha2.v|
 !i113 1
@@ -87,7 +87,7 @@ R13
 n@ch
 vchacha
 R1
-!s110 1544732199
+Z23 !s110 1544772565
 !i10b 1
 !s100 ]GCg6aiCjB1fQKk4nhLU>1
 IhFTB;nKNE_zjWY<=cgN8?1
@@ -103,328 +103,279 @@ R7
 r1
 !s85 0
 31
-Z23 !s108 1544732198.000000
+Z24 !s108 1544772565.000000
 !s107 C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/rng|C:/Users/Lucas/Documents/ece385/ecc/rng/chacha.sv|
 !i113 1
 R11
-Z24 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng
+Z25 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/rng
 R13
 vecdsa_sign
 R1
 R2
-DXx4 work 18 ecdsa_sign_sv_unit 0 22 >`SQB3V;c_=SgSejg@HdE3
+DXx4 work 18 ecdsa_sign_sv_unit 0 22 n:?8jzlmBXjnc8;=2iG3o1
 R3
 r1
 !s85 0
 31
 !i10b 1
 !s100 W_EZUB>UCR>b?g73HdWC81
-I0]Az<Y57OY6K3IkVo69960
+I>V>AZeWkhknIZ]UE6>zS?2
 !s105 ecdsa_sign_sv_unit
 S1
 R0
-Z25 w1544682592
-Z26 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv
-Z27 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv
+Z26 w1544682592
+Z27 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign.sv
+Z28 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign.sv
 L0 3
 R7
-Z28 !s108 1544732200.000000
-Z29 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv|
-Z30 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign.sv|
+Z29 !s108 1544772567.000000
+Z30 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign.sv|
 !i113 1
 R11
-Z31 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa
+Z32 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign
 R13
 vecdsa_sign_control
 R1
 R2
-DXx4 work 26 ecdsa_sign_control_sv_unit 0 22 IlT>4l8UjcMGoUieoYGo`2
+DXx4 work 26 ecdsa_sign_control_sv_unit 0 22 O^Lmf9oCIaVgHjgAHA?9F0
 R3
 r1
 !s85 0
 31
 !i10b 1
 !s100 B3h8WQlQb2zG;X1a7hA3]1
-I;ZE5YS>]j3geKWcd_[IFk0
+IVbi?zCehV92lgA>X[QVgf2
 !s105 ecdsa_sign_control_sv_unit
 S1
 R0
-Z32 w1544732186
-Z33 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv
-Z34 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv
+Z33 w1544733737
+Z34 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_control.sv
+Z35 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_control.sv
 L0 3
 R7
-R23
-Z35 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv|
-Z36 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_control.sv|
+R8
+Z36 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_control.sv|
+Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_control.sv|
 !i113 1
 R11
-R31
+R32
 R13
 Xecdsa_sign_control_sv_unit
 R1
 R2
-VIlT>4l8UjcMGoUieoYGo`2
+VO^Lmf9oCIaVgHjgAHA?9F0
 r1
 !s85 0
 31
 !i10b 1
 !s100 AmP0eVk[J=OX7CFI;jZz<2
-IIlT>4l8UjcMGoUieoYGo`2
+IO^Lmf9oCIaVgHjgAHA?9F0
 !i103 1
 S1
 R0
-R32
 R33
 R34
+R35
 L0 1
 R7
-R23
-R35
+R8
 R36
+R37
 !i113 1
 R11
-R31
+R32
 R13
 vecdsa_sign_datapath
 R1
 R2
-DXx4 work 27 ecdsa_sign_datapath_sv_unit 0 22 `1h9:Hnh]E2U:QJ9kj@TH3
+DXx4 work 27 ecdsa_sign_datapath_sv_unit 0 22 fD]Ul0DiRlJea[E>?BhDH0
 R3
 r1
 !s85 0
 31
 !i10b 1
 !s100 Z;L<VbWNQzVUT1R86i@562
-I?L7ZYzD5Qn2JPMAgAB5<Z3
+IB>maUMEgD7OKbS@X@onW_0
 !s105 ecdsa_sign_datapath_sv_unit
 S1
 R0
-Z37 w1544687466
-Z38 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv
-Z39 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv
+Z38 w1544733509
+Z39 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_datapath.sv
+Z40 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_datapath.sv
 L0 3
 R7
-R28
-Z40 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv|
-Z41 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_sign_datapath.sv|
+R29
+Z41 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_datapath.sv|
+Z42 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/sign/ecdsa_sign_datapath.sv|
 !i113 1
 R11
-R31
+R32
 R13
 Xecdsa_sign_datapath_sv_unit
 R1
 R2
-V`1h9:Hnh]E2U:QJ9kj@TH3
+VfD]Ul0DiRlJea[E>?BhDH0
 r1
 !s85 0
 31
 !i10b 1
 !s100 LAL`D=fKnzE^F;6iLBECo3
-I`1h9:Hnh]E2U:QJ9kj@TH3
+IfD]Ul0DiRlJea[E>?BhDH0
 !i103 1
 S1
 R0
-R37
 R38
 R39
+R40
 L0 1
 R7
-R28
-R40
+R29
 R41
+R42
 !i113 1
 R11
-R31
+R32
 R13
 Xecdsa_sign_sv_unit
 R1
 R2
-V>`SQB3V;c_=SgSejg@HdE3
+Vn:?8jzlmBXjnc8;=2iG3o1
 r1
 !s85 0
 31
 !i10b 1
 !s100 HK70iSZXl_dEMYJTTU3@K2
-I>`SQB3V;c_=SgSejg@HdE3
+In:?8jzlmBXjnc8;=2iG3o1
 !i103 1
 S1
 R0
-R25
 R26
 R27
+R28
 L0 1
 R7
-R28
 R29
 R30
+R31
 !i113 1
 R11
-R31
+R32
 R13
 vecdsa_verify
 R1
 R2
-DXx4 work 20 ecdsa_verify_sv_unit 0 22 ZZKc5j6cOAkgD1MRbMod=3
+DXx4 work 20 ecdsa_verify_sv_unit 0 22 @A17i3ba>1fTAA@_4b=dN0
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 ;CWnU^Wo[O5?8XV>Z0bX52
-IBLj>If:h^Q3Nc1zSOf[3Z1
+!s100 iO4dTGJ30JdePLY;fICIc1
+I[7gNjDTYgDDid>OG@deFz3
 !s105 ecdsa_verify_sv_unit
 S1
 R0
-Z42 w1544633989
-Z43 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv
-Z44 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv
+Z43 w1544753174
+Z44 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify.sv
+Z45 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify.sv
 L0 3
 R7
-R28
-Z45 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv|
-Z46 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/ecdsa_verify.sv|
+R29
+Z46 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify.sv|
+Z47 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify.sv|
 !i113 1
 R11
-R31
+Z48 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify
 R13
-Xecdsa_verify_sv_unit
+vecdsa_verify_control
 R1
 R2
-VZZKc5j6cOAkgD1MRbMod=3
-r1
-!s85 0
-31
-!i10b 1
-!s100 8eke?XKQ5zVGA:h_bSi152
-IZZKc5j6cOAkgD1MRbMod=3
-!i103 1
-S1
-R0
-R42
-R43
-R44
-L0 1
-R7
-R28
-R45
-R46
-!i113 1
-R11
-R31
-R13
-Xelliptic_curve_structs
-R1
-R14
-!i10b 1
-!s100 TE@?5PG0^a`?Gh6;@I5z41
-IcYK?T=[G86MQ^_m4Q=<8e3
-VcYK?T=[G86MQ^_m4Q=<8e3
-S1
-R0
-w1544673374
-8C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv
-FC:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv
-L0 1
-R7
-r1
-!s85 0
-31
-R23
-!s107 C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/components|C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv|
-!i113 1
-R11
-Z47 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components
-R13
-vfinal_top
-R1
-R2
-DXx4 work 17 final_top_sv_unit 0 22 SFbH2Sj9a?g:k8;4FN3]V0
+DXx4 work 28 ecdsa_verify_control_sv_unit 0 22 ]zWj<LUiVAB_An>PGO<083
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 o8mCai8zE>bo:E:idVSOP2
-Iee1E^l7;BY0Wm8Uka5[9T2
-!s105 final_top_sv_unit
+!s100 Wad_GG<aPgTH^`@`D=mE00
+IilLnHBEOjQ?Rh7eGDz8T?1
+!s105 ecdsa_verify_control_sv_unit
 S1
 R0
-Z48 w1544687463
-Z49 8C:/Users/Lucas/Documents/ece385/ecc/final_top.sv
-Z50 FC:/Users/Lucas/Documents/ece385/ecc/final_top.sv
-L0 23
+Z49 w1544741140
+Z50 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_control.sv
+Z51 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_control.sv
+L0 3
 R7
-R28
-Z51 !s107 C:/Users/Lucas/Documents/ece385/ecc/final_top.sv|
-Z52 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc|C:/Users/Lucas/Documents/ece385/ecc/final_top.sv|
+R24
+Z52 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_control.sv|
+Z53 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_control.sv|
 !i113 1
 R11
-Z53 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc
+R48
 R13
-Xfinal_top_sv_unit
+Xecdsa_verify_control_sv_unit
 R1
 R2
-VSFbH2Sj9a?g:k8;4FN3]V0
+V]zWj<LUiVAB_An>PGO<083
 r1
 !s85 0
 31
 !i10b 1
-!s100 ocn`U;L_Z>o1932W`3V4C3
-ISFbH2Sj9a?g:k8;4FN3]V0
+!s100 kkk>Dl]g?F>NdiKQOS=c51
+I]zWj<LUiVAB_An>PGO<083
 !i103 1
 S1
 R0
-R48
 R49
 R50
+R51
 L0 1
 R7
-R28
-R51
+R24
 R52
+R53
 !i113 1
 R11
-R53
+R48
 R13
-vgen_point
+vecdsa_verify_datapath
 R1
 R2
-DXx4 work 17 gen_point_sv_unit 0 22 1]7_6Eo>k`akX[NVB;Xe52
+DXx4 work 29 ecdsa_verify_datapath_sv_unit 0 22 j=j@4k=3>6`]Ed1Yz<4d<0
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 9FO_g_ChC:950Skd_En?]0
-IT_LLg`OcRA[hYHQW]Qn?C2
-!s105 gen_point_sv_unit
+!s100 8K7Md`c0jXF8I<k40;[=A1
+IbY;]5Q8IBh_j]00XWb]ZI0
+!s105 ecdsa_verify_datapath_sv_unit
 S1
 R0
-Z54 w1544728713
-Z55 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv
-Z56 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv
+Z54 w1544747091
+Z55 8C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_datapath.sv
+Z56 FC:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_datapath.sv
 L0 3
 R7
-R28
-Z57 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv|
-Z58 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv|
+R8
+Z57 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_datapath.sv|
+Z58 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify|C:/Users/Lucas/Documents/ece385/ecc/primitives/ecdsa/verify/ecdsa_verify_datapath.sv|
 !i113 1
 R11
-Z59 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations
+R48
 R13
-Xgen_point_sv_unit
+Xecdsa_verify_datapath_sv_unit
 R1
 R2
-V1]7_6Eo>k`akX[NVB;Xe52
+Vj=j@4k=3>6`]Ed1Yz<4d<0
 r1
 !s85 0
 31
 !i10b 1
-!s100 Z;6l[5a`MKG2PXE]c@U:X2
-I1]7_6Eo>k`akX[NVB;Xe52
+!s100 l`gHnoLcW0gWa;]A53<>S2
+Ij=j@4k=3>6`]Ed1Yz<4d<0
 !i103 1
 S1
 R0
@@ -433,12 +384,163 @@ R55
 R56
 L0 1
 R7
-R28
+R8
 R57
 R58
 !i113 1
 R11
-R59
+R48
+R13
+Xecdsa_verify_sv_unit
+R1
+R2
+V@A17i3ba>1fTAA@_4b=dN0
+r1
+!s85 0
+31
+!i10b 1
+!s100 8eke?XKQ5zVGA:h_bSi152
+I@A17i3ba>1fTAA@_4b=dN0
+!i103 1
+S1
+R0
+R43
+R44
+R45
+L0 1
+R7
+R29
+R46
+R47
+!i113 1
+R11
+R48
+R13
+Xelliptic_curve_structs
+R1
+R23
+!i10b 1
+!s100 zIhWgNQBA8Z]f47QlD^4G1
+IV69]0zCh[W_h6=IOd_IjB0
+VV69]0zCh[W_h6=IOd_IjB0
+S1
+R0
+w1544765524
+8C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv
+FC:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/components|C:/Users/Lucas/Documents/ece385/ecc/components/elliptic_curve_structs.sv|
+!i113 1
+R11
+Z59 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/components
+R13
+vfinal_top
+R1
+R2
+DXx4 work 17 final_top_sv_unit 0 22 BLAZ4fl[Zd:DMh3=<R3TX3
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 8jTM4CkRdPKJm?mZPRM7@1
+IYl6DdRmUzdZXCj:iSh=]E3
+!s105 final_top_sv_unit
+S1
+R0
+Z60 w1544770969
+Z61 8C:/Users/Lucas/Documents/ece385/ecc/final_top.sv
+Z62 FC:/Users/Lucas/Documents/ece385/ecc/final_top.sv
+L0 23
+R7
+R29
+Z63 !s107 C:/Users/Lucas/Documents/ece385/ecc/final_top.sv|
+Z64 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc|C:/Users/Lucas/Documents/ece385/ecc/final_top.sv|
+!i113 1
+R11
+Z65 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc
+R13
+Xfinal_top_sv_unit
+R1
+R2
+VBLAZ4fl[Zd:DMh3=<R3TX3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ocn`U;L_Z>o1932W`3V4C3
+IBLAZ4fl[Zd:DMh3=<R3TX3
+!i103 1
+S1
+R0
+R60
+R61
+R62
+L0 1
+R7
+R29
+R63
+R64
+!i113 1
+R11
+R65
+R13
+vgen_point
+R1
+R2
+DXx4 work 17 gen_point_sv_unit 0 22 mF]^]Y^JblTCfPfiTfKm01
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^3nNO[;Wg2@Dnm;ZLK^h42
+Ild[:[FZ>lQ?=`9ZU9h7Ne1
+!s105 gen_point_sv_unit
+S1
+R0
+Z66 w1544771166
+Z67 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv
+Z68 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv
+L0 3
+R7
+R8
+Z69 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv|
+Z70 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/gen_point.sv|
+!i113 1
+R11
+Z71 !s92 -sv -work work +incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations
+R13
+Xgen_point_sv_unit
+R1
+R2
+VmF]^]Y^JblTCfPfiTfKm01
+r1
+!s85 0
+31
+!i10b 1
+!s100 Z;6l[5a`MKG2PXE]c@U:X2
+ImF]^]Y^JblTCfPfiTfKm01
+!i103 1
+S1
+R0
+R66
+R67
+R68
+L0 1
+R7
+R8
+R69
+R70
+!i113 1
+R11
+R71
 R13
 vMaj
 R1
@@ -469,25 +571,25 @@ n@maj
 vmodular_inverse
 R1
 R2
-DXx4 work 23 modular_inverse_sv_unit 0 22 :XX>?og>;6ToC3bie_A;01
+DXx4 work 23 modular_inverse_sv_unit 0 22 :9jlJEPk4@6W]LeHg@D7:2
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 _nBS9g=I6Gk6Y=SNJ0znE0
-IPNZmnT42=@Ha>=XRHSzAg2
+!s100 57EnJA<z<mAgAB:o`k?S93
+IR@i<bKLhmad89^G>dF86W2
 !s105 modular_inverse_sv_unit
 S1
 R0
-Z60 w1544673443
-Z61 8C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv
-Z62 FC:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv
+Z72 w1544772558
+Z73 8C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv
+Z74 FC:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv
 L0 3
 R7
-R8
-Z63 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv|
-Z64 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv|
+R24
+Z75 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv|
+Z76 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/modular_inverse.sv|
 !i113 1
 R11
 R12
@@ -495,24 +597,24 @@ R13
 Xmodular_inverse_sv_unit
 R1
 R2
-V:XX>?og>;6ToC3bie_A;01
+V:9jlJEPk4@6W]LeHg@D7:2
 r1
 !s85 0
 31
 !i10b 1
 !s100 :TkLhjmG:^a4EjC@WZd312
-I:XX>?og>;6ToC3bie_A;01
+I:9jlJEPk4@6W]LeHg@D7:2
 !i103 1
 S1
 R0
-R60
-R61
-R62
+R72
+R73
+R74
 L0 1
 R7
-R8
-R63
-R64
+R24
+R75
+R76
 !i113 1
 R11
 R12
@@ -520,7 +622,7 @@ R13
 vmultiplier
 R1
 R2
-DXx4 work 18 multiplier_sv_unit 0 22 h5D]6[n92<Yd3JdkmE[6;1
+DXx4 work 18 multiplier_sv_unit 0 22 znK7iCS[RIe=alNN7jiCe0
 R3
 r1
 !s85 0
@@ -531,14 +633,14 @@ I_W=?TNAUMOY]T3]TTYPhl1
 !s105 multiplier_sv_unit
 S1
 R0
-Z65 w1544673255
-Z66 8C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv
-Z67 FC:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv
+Z77 w1544673255
+Z78 8C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv
+Z79 FC:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv
 L0 3
 R7
-R8
-Z68 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv|
-Z69 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv|
+R24
+Z80 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv|
+Z81 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/modular_operations/multiplier.sv|
 !i113 1
 R11
 R12
@@ -546,24 +648,24 @@ R13
 Xmultiplier_sv_unit
 R1
 R2
-Vh5D]6[n92<Yd3JdkmE[6;1
+VznK7iCS[RIe=alNN7jiCe0
 r1
 !s85 0
 31
 !i10b 1
 !s100 Q0zc2M>11lzI_1i_[5Fhz0
-Ih5D]6[n92<Yd3JdkmE[6;1
+IznK7iCS[RIe=alNN7jiCe0
 !i103 1
 S1
 R0
-R65
-R66
-R67
+R77
+R78
+R79
 L0 1
 R7
-R8
-R68
-R69
+R24
+R80
+R81
 !i113 1
 R11
 R12
@@ -571,7 +673,7 @@ R13
 vpoint_add
 R1
 R2
-DXx4 work 17 point_add_sv_unit 0 22 WYMc8fC0VK?V]LI8a^EI02
+DXx4 work 17 point_add_sv_unit 0 22 022Z_^zDP7M3B3@TVfM661
 R3
 r1
 !s85 0
@@ -582,47 +684,47 @@ I^?7?78FYBQ]OZJAK90WGR2
 !s105 point_add_sv_unit
 S1
 R0
-Z70 w1544672739
-Z71 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv
-Z72 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv
+Z82 w1544672739
+Z83 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv
+Z84 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv
 L0 3
 R7
 R8
-Z73 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv|
-Z74 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv|
+Z85 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv|
+Z86 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_add.sv|
 !i113 1
 R11
-R59
+R71
 R13
 Xpoint_add_sv_unit
 R1
 R2
-VWYMc8fC0VK?V]LI8a^EI02
+V022Z_^zDP7M3B3@TVfM661
 r1
 !s85 0
 31
 !i10b 1
 !s100 UQ8VPhdV0:o`4Di2eXDQQ0
-IWYMc8fC0VK?V]LI8a^EI02
+I022Z_^zDP7M3B3@TVfM661
 !i103 1
 S1
 R0
-R70
-R71
-R72
+R82
+R83
+R84
 L0 1
 R7
 R8
-R73
-R74
+R85
+R86
 !i113 1
 R11
-R59
+R71
 R13
 vpoint_double
 R1
 R2
-DXx4 work 20 point_double_sv_unit 0 22 FdF0[?`n8kTe`<Gg?3OEQ2
+DXx4 work 20 point_double_sv_unit 0 22 ]>8EmmX3cClbeNRb6a`W83
 R3
 r1
 !s85 0
@@ -633,46 +735,46 @@ IGlUDK7;:^A>kQU?D1aRbQ0
 !s105 point_double_sv_unit
 S1
 R0
-Z75 w1544644938
-Z76 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv
-Z77 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv
+Z87 w1544644938
+Z88 8C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv
+Z89 FC:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv
 L0 3
 R7
 R8
-Z78 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv|
-Z79 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv|
+Z90 !s107 C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv|
+Z91 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations|C:/Users/Lucas/Documents/ece385/ecc/primitives/point_operations/point_double.sv|
 !i113 1
 R11
-R59
+R71
 R13
 Xpoint_double_sv_unit
 R1
 R2
-VFdF0[?`n8kTe`<Gg?3OEQ2
+V]>8EmmX3cClbeNRb6a`W83
 r1
 !s85 0
 31
 !i10b 1
 !s100 =OZN0LS1BmV_eU55^^ZRg2
-IFdF0[?`n8kTe`<Gg?3OEQ2
+I]>8EmmX3cClbeNRb6a`W83
 !i103 1
 S1
 R0
-R75
-R76
-R77
+R87
+R88
+R89
 L0 1
 R7
 R8
-R78
-R79
+R90
+R91
 !i113 1
 R11
-R59
+R71
 R13
 vquarter_round
 R1
-R14
+R23
 !i10b 1
 !s100 [4M[TJW?ao>[5IcaEh?083
 IN6Ld;IkNfM=h78[[@fm3U0
@@ -688,17 +790,17 @@ R7
 r1
 !s85 0
 31
-R23
+R24
 !s107 C:/Users/Lucas/Documents/ece385/ecc/rng/quarter_round.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/rng|C:/Users/Lucas/Documents/ece385/ecc/rng/quarter_round.sv|
 !i113 1
 R11
-R24
+R25
 R13
 vreg_256
 R1
 R2
-DXx4 work 15 reg_256_sv_unit 0 22 R3_XzPfPS>BBS4j57PX3I3
+DXx4 work 15 reg_256_sv_unit 0 22 mFBSf9^Kh?nPE92NH@9Lz3
 R3
 r1
 !s85 0
@@ -709,89 +811,89 @@ IN=e9_C]fl_DFK0F>PUCXE1
 !s105 reg_256_sv_unit
 S1
 R0
-Z80 w1544518722
-Z81 8C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv
-Z82 FC:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv
+Z92 w1544518722
+Z93 8C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv
+Z94 FC:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv
 L0 3
 R7
-R23
-Z83 !s107 C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv|
-Z84 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/components|C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv|
+R24
+Z95 !s107 C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv|
+Z96 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/components|C:/Users/Lucas/Documents/ece385/ecc/components/reg_256.sv|
 !i113 1
 R11
-R47
+R59
 R13
 Xreg_256_sv_unit
 R1
 R2
-VR3_XzPfPS>BBS4j57PX3I3
+VmFBSf9^Kh?nPE92NH@9Lz3
 r1
 !s85 0
 31
 !i10b 1
 !s100 ?^DGFAV_?[ec=Rmb`gf_D2
-IR3_XzPfPS>BBS4j57PX3I3
+ImFBSf9^Kh?nPE92NH@9Lz3
 !i103 1
 S1
 R0
-R80
-R81
-R82
+R92
+R93
+R94
 L0 1
 R7
-R23
-R83
-R84
+R24
+R95
+R96
 !i113 1
 R11
-R47
+R59
 R13
 vsha256_block
 R1
-Z85 !s110 1544732197
+R14
 !i10b 1
 !s100 _O3RaF0ei]PYlGm7`4XoF2
 IMXYbkk7N7z?;f:5Y4akL52
 R3
-Z86 !s105 sha256_v_unit
+Z97 !s105 sha256_v_unit
 S1
 R0
-Z87 w1544598210
-Z88 8C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v
-Z89 FC:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v
+Z98 w1544598210
+Z99 8C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v
+Z100 FC:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v
 L0 3
 R7
 r1
 !s85 0
 31
 R19
-Z90 !s107 C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v|
-Z91 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog|C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v|
+Z101 !s107 C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v|
+Z102 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog|C:/Users/Lucas/Documents/ece385/ecc/sha2-verilog/sha256.v|
 !i113 1
 R11
 R22
 R13
 vsha256_H_0
 R1
-R85
+R14
 !i10b 1
 !s100 Q9Gdd6HlNIWW?04MS`[gk1
 IZgk3FGEO78T7CeM7Ah2Mf2
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 184
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
@@ -799,25 +901,25 @@ R13
 nsha256_@h_0
 vsha256_K_machine
 R1
-R85
+R14
 !i10b 1
 !s100 YI0fk1fn>?;^1B7YO4IZX3
 I=i80R`n0U4Y;:^lB7EUR[0
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 144
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
@@ -825,50 +927,50 @@ R13
 nsha256_@k_machine
 vsha256_round
 R1
-R85
+R14
 !i10b 1
 !s100 kWh7[U36YI371oZ<NC_2?1
 I>XniN@OAN@7ZizOBaQK5=1
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 63
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
 R13
 vsha256_S0
 R1
-R85
+R14
 !i10b 1
 !s100 27`i;0?[A;[L3G4Ic^G1<2
 IBb8K:aLi?P^4]PCWz[k?X0
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 100
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
@@ -876,50 +978,50 @@ R13
 nsha256_@s0
 vsha256_s0
 R1
-R85
+R14
 !i10b 1
 !s100 FQTa8_gB;;lVEPH=LNbPn0
 I^TnkD`;V:6jMi9K6SU;3h0
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 122
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
 R13
 vsha256_S1
 R1
-R85
+R14
 !i10b 1
 !s100 6>AAzXEUWF@LRWGUzZQj20
 IDGQ0JdcSa2LVT?Qc[`87T2
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 111
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
@@ -927,25 +1029,25 @@ R13
 nsha256_@s1
 vsha256_s1
 R1
-R85
+R14
 !i10b 1
 !s100 ;m;_1JTOOnzi5S5`f?Clk1
 I<emg`o@o>fR_aMnPOdOY=0
 R3
-R86
+R97
 S1
 R0
-R87
-R88
-R89
+R98
+R99
+R100
 L0 133
 R7
 r1
 !s85 0
 31
 R19
-R90
-R91
+R101
+R102
 !i113 1
 R11
 R22
@@ -977,15 +1079,15 @@ R22
 R13
 vtop_level_testbench
 R1
-!s110 1544732201
+!s110 1544772567
 !i10b 1
-!s100 mHgNaU^@e3;]:hzNHzade0
-IUo^[bUO6`jzK@6fdY^Z6z3
+!s100 8Z[h]TS9W3PNfEf6z_:Ca0
+I1jz9LDbS<E:GHOJ7O^VEJ3
 R3
 !s105 top_level_testbench_sv_unit
 S1
 R0
-w1544680482
+w1544770478
 8C:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv
 FC:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv
 L0 1
@@ -993,7 +1095,7 @@ R7
 r1
 !s85 0
 31
-!s108 1544732201.000000
+R29
 !s107 C:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lucas/Documents/ece385/ecc/testbenches|C:/Users/Lucas/Documents/ece385/ecc/testbenches/top_level_testbench.sv|
 !i113 1

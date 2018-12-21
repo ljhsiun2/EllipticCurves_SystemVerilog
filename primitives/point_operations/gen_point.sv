@@ -8,7 +8,10 @@ module gen_point (
 	output 	logic 			Done
 );
 
-	enum logic [2:0] {Init, find_start, Inc, Double, Add, Finish} State, Next_State;
+enum logic [2:0] {Init, init_load,
+	// find_start,
+	Inc, Double, Add, dummy_op,
+	Finish} State, Next_State;
 
 
 	logic [255:0] priv_in, priv_out, x_in, x_out, y_in, y_out;
@@ -75,20 +78,22 @@ assign flag = priv_out[0];
 		begin
             State <= Init;
 		end
-        else
+        else begin
             State <= Next_State;
+		end
     end
 
 //Next state logic
 always_comb begin
     Next_State = State;
     unique case(State)
-		Init: Next_State = find_start;
-		find_start : begin
-			if(privKey[start_bit_out-1] == 1'b1)
-				Next_State = Add;
-			else Next_State = find_start;
-		end
+		Init: Next_State = init_load;
+		// find_start : begin
+		// 	if(privKey[start_bit_out-1] == 1'b1)
+		// 		Next_State = Add;
+		// 	else Next_State = find_start;
+		// end
+		init_load : Next_State = Add;
 		Inc: Next_State = Add;	//Skips doubling for the first round since the multiplication register are init to Gx, Gy
 		Double:
 		begin
@@ -97,28 +102,30 @@ always_comb begin
 			else
 				Next_State = Double;
 		end
+		dummy_op : if(add_done == 1'b1) Next_State = Double;
 		Add:
 		begin
 			if(x_out == 0 && y_out == 0 && priv_out[0] == 1'b1)
 				Next_State = Double;
 			else if(add_done == 1'b0 && priv_out[0] == 1'b1)	//Stays here until point add finishes up
 				Next_State = Add;
-			else if(count_out == start_bit_out)
+			else if(count_out == 8'd255)
 			begin
 				if(add_done == 1'b1)
 					Next_State = Finish;
 				else
 					Next_State = Add;
 			end
-			else
-				Next_State = Double;
+			else if(priv_out[0] == 1'b0)
+				Next_State = dummy_op;
+			else Next_State = Double;
 		end
 		Finish: Next_State = Finish;
 		default: ;
 	endcase
 
 	//Default vals
-	priv_in = priv_out;
+	priv_in = privKey;
 	x_in = x_out;
 	y_in = y_out;
 	count_in = count_out;
@@ -168,17 +175,21 @@ always_comb begin
 			mult_y_load = 1'b1;
 
 			//Load private key reg
-			priv_load = 1'b1;
-			priv_in = privKey;
+
 
 		end
 
-		find_start : begin
-			priv_in = privKey;
+		init_load : begin
 			priv_load = 1'b1;
-			start_bit_load = 1'b1;
-			start_bit_in = start_bit_out - 1;
+			priv_in = privKey;
 		end
+		//
+		// find_start : begin
+		// 	priv_in = privKey;
+		// 	priv_load = 1'b1;
+		// 	start_bit_load = 1'b1;
+		// 	start_bit_in = start_bit_out - 1;
+		// end
 
 		Inc:
 		begin
@@ -207,6 +218,13 @@ always_comb begin
 				mult_y_in = mult_y_out;
 			end
 		end
+
+		dummy_op:
+		begin
+			if(add_done == 1'b1)
+				mult_reset = 1'b1;
+		end
+
 		Add:
 		begin
 			mult_reset = 1'b1;
@@ -228,6 +246,8 @@ always_comb begin
 					end
 				end
 			end
+			else if(priv_out[0] == 1'b0)
+				add_reset = 1'b1;
 			else	//Do nothing
 			begin
 				x_in = x_out;
