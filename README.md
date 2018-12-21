@@ -13,10 +13,33 @@ Some applications of this might be:
   * Fast device in your blockchain, especially if you have lots of code updates
   * Coprocessor on IoT devices (e.g. Alexa)
   
+# Current Features
+  * ECDSA
+  * ElGamal's
+  * ChaCha20 for PRNG
+  * Customizable curve parameters (via components/elliptic_curve_structs)
   
+### Wish List
+  * Timing security
+  * Pipelined 
+  * Speed optimizations (e.g. Montgomery form, Itoh-Tsujii's, Karatsuba's) 
+  * Real board to obtain power metrics
+  * Create real source of entropy (currently hardcoded seeds)
+
+# Repository Structure
+  - src/ -- bulk of EC modules
+    - components/ -- basic components such as registers, project structs, etc.
+    - ecdsa/ -- ECDSA top level
+    - elgamal/ -- ElGamal's top level
+    - primitives/ -- contains common base operations e.g. add, hash, point multiplication.
+    - rng/ -- contains ChaCha20 implementation
+  - images/ -- contains images
+  - misc/ -- contains 
+  - testbenches/ -- files
   
+
 # Evaluation
-![Here](https://imgur.com/a/TmFmNsK) is 
+![](https://raw.githubusercontent.com/ljhsiun2/Elgamal_ECC/readme-changes/images/OXONtHi.png) Here is a simulation of the 
 
 # Project specific information
 --secp256k1 parameters are hardcoded, but changing to another prime field curve is relatively trivial-- only bit sizes and "magic numbers" need
