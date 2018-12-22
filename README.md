@@ -42,7 +42,7 @@ Some applications of this might be:
 # Function Flow
 
 # Evaluation
-![](https://raw.githubusercontent.com/ljhsiun2/Elgamal_ECC/readme-changes/images/Capture.png) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. 
+![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture2.PNG) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. 
 
 # Project specific information
 
