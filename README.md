@@ -16,7 +16,7 @@ Some applications of this might be:
   
 # Current Features
   * ECDSA
-  * ElGamal's
+  * ElGamal's (needs cleanup)
   * ChaCha20 for PRNG
   * Customizable curve parameters (via components/elliptic_curve_structs)
   
@@ -44,6 +44,8 @@ Some applications of this might be:
 # Function Flow
 ![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture.PNG) Here is a closer look at how ECDSA is implemented. Note that any multiplies and additions are done with the multiplier.sv and add.sv in src/primitives/modular_operations/
 
+# How to Use
+Simply add the files under src/ to your project and instantiate the module wherever you see fit. 
 
 # Evaluation
 ![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture2.PNG) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. I was unable to find power or area metrics for the tested cores running these at the time of writing.
