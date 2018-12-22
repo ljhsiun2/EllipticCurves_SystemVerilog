@@ -13,24 +13,51 @@ Some applications of this might be:
   * Fast device in your blockchain, especially if you have lots of code updates
   * Coprocessor on IoT devices (e.g. Alexa)
   
+# Current Features
+  * ECDSA
+  * ElGamal's
+  * ChaCha20 for PRNG
+  * Customizable curve parameters (via components/elliptic_curve_structs)
   
+### Wish List/Future Work
+  * Timing security
+  * Pipelined 
+  * Speed optimizations (e.g. Montgomery form, Itoh-Tsujii's, Karatsuba's, Shamir's verif trick) 
+  * Real board to obtain power metrics
+  * Create real source of entropy (currently hardcoded seeds)
+  * Implement Tonelli-Shanks fully (curve prime *p* currently must be == 3 mod 4)
+
+# Repository Structure
+  - src/ -- bulk of EC modules
+    - components/ -- basic components such as registers, project structs, etc.
+    - ecdsa/ -- ECDSA top level
+    - elgamal/ -- ElGamal's top level
+    - primitives/ -- contains common base operations e.g. add, hash, point multiplication.
+    - rng/ -- contains ChaCha20 implementation
+  - images/ -- images for README
+  - misc/ -- scripts and values for comparing functionality
+  - testbenches/ -- testbenches for running modules
+  - final_top.sv -- top level module for running protocol(s)
   
+# Function Flow
+
 # Evaluation
-![Here](https://imgur.com/a/TmFmNsK) is 
+![](https://raw.githubusercontent.com/ljhsiun2/Elgamal_ECC/readme-changes/images/Capture.png) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. 
 
 # Project specific information
---secp256k1 parameters are hardcoded, but changing to another prime field curve is relatively trivial-- only bit sizes and "magic numbers" need
-to be changed, and these magic numbers have comments next to them.
 
---The sent message is used as the x value to encode a message as a point on the curve. The message encoding involves the Tonelli-Shanks
+-- Created on Quartus 18.1 Lite Edition
+
+-- The sent message is used as the x value to encode a message as a point on the curve. The message encoding involves the Tonelli-Shanks
 algorithm, so ensure that *p* mod 4 === 3 (which should always be the case anyways if using secp curves).
 
---Chacha20 is used as the random number generator for private key generation. The seeds to the RNG are hardcoded, and have no real source
-of entropy (e.g. a mouse or temperature)
+-- Seeds to ChaCha20 are hardcoded due to the lack of any real board (and thus real entropy source).
 
---Scalar multiplication is done via double-and-add. It's recommended to do sliding-window and/or LUT or Montgomery ladder for either performance
-or security.
+# Challenges and Lessons
+This section is to primarily detail some of the challenges I've faced in creating this repo and are not relevant to general functionality.
 
---Encrypt and decrypt takes ~60ms and ~50ms respectively. 
-
---Final_top_2 and testbench_2 are the ModelSim files, final_top is the interface to the actual board. 
+  * __Implementation__ : Many implementation details are left out of papers for sake of conciseness and repetitiveness. For instance, many modules explicity require a done state or "enable" signal, since intermediate inputs in any module with combinational logic will affect its output. Those more experienced may find this obvious, but still one that was fun to find out.
+  
+  * __Integration__ : Some modules are unnecessary to reimplement as they are (somewhat) widely available in Verilog, such as SHA256. The issue initally with the repository I had used for SHA was that it didn't compile on Quartus 18 Lite, and so numerous modifications to the module were made to attain functionality. This took many more hours than I had expected, and the lesson is to never pull-and-plug random repositories without vetting it.
+  
+  * __Testing and Compilng__: Synthesis time takes ~30 minutes, ~15 minutes to run a simulation, and ~4 hours to get timing information. This is a barrier to testing some components of functionality, as even one small mistake can result in hours wasted, and required lots of patience on my part.
