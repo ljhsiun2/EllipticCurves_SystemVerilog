@@ -20,12 +20,13 @@ Some applications of this might be:
   * Customizable curve parameters (via components/elliptic_curve_structs)
   
 ### Wish List/Future Work
-  * Timing security
+  * Timing/power security
   * Pipelined 
   * Speed optimizations (e.g. Montgomery form, Itoh-Tsujii's, Karatsuba's, Shamir's verif trick) 
   * Real board to obtain power metrics
   * Create real source of entropy (currently hardcoded seeds)
   * Implement Tonelli-Shanks fully (curve prime *p* currently must be == 3 mod 4)
+  * Optimize critical path/max frequency
 
 # Repository Structure
   - src/ -- bulk of EC modules
@@ -40,9 +41,16 @@ Some applications of this might be:
   - final_top.sv -- top level module for running protocol(s)
   
 # Function Flow
+![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture.PNG) Here is a closer look at how ECDSA is implemented. Note that any multiplies and additions are done with the multiplier.sv and add.sv in src/primitives/modular_operations/
+
 
 # Evaluation
-![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture2.PNG) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. 
+![](https://raw.githubusercontent.com/ljhsiun2/EllipticCurves_SystemVerilog/readme-changes/images/Capture2.PNG) Here is a simulation of the ECDSA signing implementation run at 1GHz. The signature finishes in ~5ms, or about 5 million cycles. [Crypto++ v5.6](https://www.cryptopp.com/benchmarks.html) runs ECDSA over a 256-bit curve in ~3ms, or about 5.27 million cycles on an Intel Core 2. At the time of this writing, the latest version of Crypto++ is v7.0, which don't seem to have benchmarks available yet. I was unable to find power or area metrics for the tested cores running these at the time of writing.
+
+While it may appear that my implementation is fast, keep in mind it is still very insecure, and that the Intel Core 2 is a core from 2006.
+
+**Note:** Crytpo++ used to have [this page](https://web.archive.org/web/20181107125125/https://www.cryptopp.com/benchmarks.html) as its benchmarks which evaluated Crypto++ v6.0 on a Skylake-i5. I'm not sure why they have v5.6 benchmarks currently displayed on a 2006 processor. Regardless, the removed benchmarks are linked above.
+
 
 # Project specific information
 
