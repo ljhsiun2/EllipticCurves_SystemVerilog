@@ -1,0 +1,19 @@
+package elliptic_curve_structs;
+
+typedef struct packed {
+    logic [255:0] x = 256'h79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798;
+    logic [255:0] y = 256'h483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8;
+} curve_point;
+
+typedef struct packed {
+    logic [255:0] P = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F;
+    logic [255:0] n = 256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141;
+    curve_point base_point;
+} secp256k1_parameters;
+
+typedef struct packed {
+    logic [255:0] r;
+    logic [255:0] s;
+} signature;
+
+endpackage : elliptic_curve_structs

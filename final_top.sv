@@ -42,7 +42,9 @@ assign Gy = 256'h483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B
 
 signature_t my_signature;
 curve_point_t pub_key;
+curve_point_t pub_key2;
 logic init_gen_done;
+logic init_gen_done2;
 /* init pub point Q */
 // TODO make multiple batches
 gen_point init_point (
@@ -50,6 +52,13 @@ gen_point init_point (
 	.privKey(priv_key),
 	.in_point(params.base_point), .out_point(pub_key),
 	.Done(init_gen_done)
+);
+
+gen_point init_point2 (
+	.clk, .Reset(reset),
+	.privKey(priv_key+100),
+	.in_point(params.base_point), .out_point(pub_key2),
+	.Done(init_gen_done2)
 );
 
 /* 7) return (r, s) */
