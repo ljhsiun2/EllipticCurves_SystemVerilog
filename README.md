@@ -11,7 +11,8 @@ With that said, the most appealing reason to have elliptic curve cryptography on
 Some applications of this might be:
   * Hardware accelerator for TLS (paper above)
   * Fast device in your blockchain, especially if you have lots of code updates
-  * Coprocessor on IoT devices (e.g. Alexa)
+  * [Coprocessor](https://www.researchgate.net/profile/Philip_Leong3/publication/2633178_FPGA_Implementation_of_a_Microcoded_Elliptic_Curve_Cryptographic_Processor/links/55507c6f08ae93634ec8dec1/FPGA-Implementation-of-a-Microcoded-Elliptic-Curve-Cryptographic-Processor.pdf) on IoT or embedded devices (e.g. Alexa)
+  * An FPGA cluster to [break certain curves for fun](https://eprint.iacr.org/2009/541.pdf) or (solve discrete logs on curves faster)[https://cr.yp.to/dlog/sect113r2-20160806.pdf]
   
 # Current Features
   * ECDSA
