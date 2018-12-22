@@ -1,5 +1,3 @@
-import elliptic_curve_structs::*;
-
 module reg_256 #(parameter size = 256)
 (
 	input  logic clk, Load,

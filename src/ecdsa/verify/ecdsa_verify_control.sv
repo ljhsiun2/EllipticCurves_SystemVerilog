@@ -1,4 +1,4 @@
-import elliptic_curve_structs::*;
+//import elliptic_curve_structs::*;
 
 module ecdsa_verify_control (
     input logic             clk,

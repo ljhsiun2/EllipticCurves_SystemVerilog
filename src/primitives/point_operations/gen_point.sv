@@ -111,10 +111,7 @@ always_comb begin
 				Next_State = Add;
 			else if(count_out == 8'd255)
 			begin
-				if(add_done == 1'b1)
-					Next_State = Finish;
-				else
-					Next_State = Add;
+				Next_State = Finish;
 			end
 			else if(priv_out[0] == 1'b0)
 				Next_State = dummy_op;
